@@ -1,0 +1,8 @@
+.body {
+    display: grid;
+}
+
+.intro {
+    align-items: center;
+    text-align: center;
+}
