@@ -79,7 +79,7 @@ body {
   margin-top: -150px;
 }
 
-.profile-div {
+.profile-container {
   display: flex;
   align-items: center;
   margin-top: 100px;
@@ -96,6 +96,7 @@ body {
 .profile_pic {
   border-radius: 50%;
   width: 300px;
+  border: 1px solid white;
 }
 
 .profile_name {
@@ -129,7 +130,7 @@ body {
 .section:nth-child(2) {
   /* max-width: 1200px;
   margin: 0 auto; */
-  background-color: blue;
+  /* background-color: blue; */
   justify-content: center;
   align-items: center;
 }
@@ -140,8 +141,47 @@ body {
   display: flex;
   justify-content: center;
   align-items: start;
-  margin-top: -370px;
+  padding-top: 80px;
+  margin-top: -120px;
 }
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.job-description {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.title-experience {
+  flex: 1;
+  margin-bottom: 10px;
+  padding-right: 100px;
+}
+
+.experience-name {
+  font-size: 28px;
+}
+
+.description-experience {
+  flex: 2;
+  padding-bottom: 20px;
+}
+
+.title-experience-description {
+  font-size: 20px;
+  font-style: italic;
+}
+
 
 /* PROJECTS */
 .section:nth-child(3) {
