@@ -134,6 +134,15 @@ body {
   align-items: center;
 }
 
+.experience-title {
+  font-size: 25px;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: -370px;
+}
+
 /* PROJECTS */
 .section:nth-child(3) {
   background: purple;
