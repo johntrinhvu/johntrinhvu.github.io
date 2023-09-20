@@ -128,7 +128,7 @@ body {
 
 /* EXPERIENCE */
 .section:nth-child(2) {
-  background-color: blue;
+  /* background-color: blue; */
   justify-content: center;
   align-items: center;
 }
