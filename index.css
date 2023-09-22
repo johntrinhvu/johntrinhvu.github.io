@@ -214,6 +214,17 @@ body {
   align-items: center;
 }
 
+.resume-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-actual img {
+  height: 40%;
+  width: 40%;
+}
+
 /* CONTACT */
 .section:nth-child(5) {
   background: silver;
