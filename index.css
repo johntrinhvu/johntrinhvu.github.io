@@ -184,7 +184,7 @@ body {
 
 /* PROJECTS */
 .section:nth-child(3) {
-  background: purple;
+  /* background: purple; */
   justify-content: center;
   align-items: center;
 }
@@ -205,29 +205,39 @@ body {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
+
+}
+
+.link-to-project {
+  color: rgb(0, 157, 255);
+  font-size: 24px;
+}
+
+.github-repo {
+  font-size: 20px;
+  color: gray;
 }
 
 /* RESUME */
 .section:nth-child(4) {
-  background: orange;
+  /* background: orange; */
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .resume-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
 }
 
 .resume-actual img {
-  height: 40%;
-  width: 40%;
+  max-width: 40%;
+  height: auto;
 }
 
 /* CONTACT */
 .section:nth-child(5) {
-  background: silver;
+  /* background: silver; */
   justify-content: center;
   align-items: center;
 }
