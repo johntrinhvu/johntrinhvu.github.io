@@ -1,7 +1,11 @@
+import Navbar from "./components/Navbar/navbar";
+import Intro from "./components/Intro/intro";
+
 export default function App() {
   return (
     <div className="App">
-      <p>Testing</p>
+      <Navbar />
+      <Intro />
     </div>
   );
 };

@@ -1,0 +1,94 @@
+#intro {
+    display: flex;
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 80rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.introContent {
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.introTextDesc {
+    font-weight: 600;
+    font-size: 2.7rem;
+}
+
+.viewWorkBtn {
+    color: white;
+}
+
+.profPic {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.bg {
+    max-height: 60%;
+    width: auto;
+    border-radius: 10%;
+    /* border: 2px solid white; */
+}
+
+.hello {
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.introName {
+    color: rgb(30, 165, 248);
+}
+
+.introPara {
+    font-size: medium;
+    font-weight: 100;
+    max-width: 40rem;
+    margin-top: 2rem;
+}
+
+.viewWorkBtn {
+    background: white;
+    color: black;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 1rem;
+    padding: 15px;
+    font-size: 1rem;
+
+}
+
+.viewWorkBtn:hover {
+    background-color: rgb(234, 234, 234);
+    color: rgb(30, 165, 248);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.arrow-down {
+    padding-top: 2px;
+}
+
+@media screen and (max-width:840) {
+    .profPic {
+        right: -10vw
+    }
+
+    .inroContent {
+        font-size: 10vw;
+    }
+}

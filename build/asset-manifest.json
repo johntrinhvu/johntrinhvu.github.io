@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.2fe5e96a.js",
-    "index.html": "/index.html",
-    "main.2fe5e96a.js.map": "/static/js/main.2fe5e96a.js.map"
+    "main.js": "/johntrinhvu.github.io/static/js/main.2fe5e96a.js",
+    "index.html": "/johntrinhvu.github.io/index.html",
+    "main.2fe5e96a.js.map": "/johntrinhvu.github.io/static/js/main.2fe5e96a.js.map"
   },
   "entrypoints": [
     "static/js/main.2fe5e96a.js"
