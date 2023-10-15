@@ -18,7 +18,7 @@ export default function intro() {
                 </span>
                 <p className="introPara">
                     I am a dedicated and ambitious student at the University of California, Irvine (UCI), pursuing a degree in software engineering. I am based in Irvine, CA, but am
-                    originally from Washingon, D.C. My commitment to excellence shines through in both my academic pursuits and my competitive drive, particularly in the realm of League of Legends.
+                    originally from Washingon, D.C.
                 </p>
                 <p className="introPara">
                     
