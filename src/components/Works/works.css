@@ -1,0 +1,41 @@
+#works {
+    min-height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 70rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.worksTitle {
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+
+.worksDescription {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.worksCards {
+    width: 100vw;
+    max-width: 65rem;
+}
+
+.worksImg {
+    object-fit: cover;
+    height: 50%;
+    width: 50%;
+    margin: 0.5rem;
+    border: 2px solid rgb(9, 32, 46);
+    border-radius: 1rem;
+}
+
+.worksImg:hover {
+    cursor: pointer;
+    background: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79), url('../../assets/Portfolio1.png'));
+}
