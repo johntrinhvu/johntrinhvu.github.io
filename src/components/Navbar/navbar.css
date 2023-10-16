@@ -1,5 +1,5 @@
 .navbar {
-    /* background-color: black; */
+    background: rgb(3, 11, 16);
     height: 5rem;
     width: 100vw;
     max-width: 80rem;
@@ -11,7 +11,7 @@
     position: sticky;
     top: 0;
     z-index: 3;
-    font-size: 1rem;
+    font-size: 1.1rem;
     /* border-bottom: 2px solid rgb(30, 165, 248); */
 }
 
