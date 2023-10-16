@@ -39,9 +39,9 @@
 }
 
 .bg {
+    margin-top: 10vh;
     max-height: 60%;
     width: auto;
-    border-radius: 10%;
     /* border: 2px solid white; */
 }
 
@@ -83,13 +83,31 @@
     padding-top: 2px;
 }
 
-@media screen and (max-width: 616px) {
+@media screen and (max-width: 820px) {
     .profPic {
-        right: 20vw;
+        right: 25vw;
     }
 
-    .inroContent {
-        font-size: 10vw;
+    .introContent {
+        font-size: 7vw;
+    }
+
+    .introTextDesc {
+        font-size: 4.5vw;
+    }
+
+    .hello {
+        font-size: 4.5vw;
+    }
+}
+
+@media screen and (max-width: 616px) {
+    .introContent {
+        font-size: 6vw;
+    }
+
+    .introTextDesc {
+        font-size: 4.5vw;
     }
 
     .hello {
@@ -99,6 +117,36 @@
 
 @media screen and (max-width: 485px) {
     .profPic {
-        right: 10vw;
+        right: -10vw;
+    }
+
+    .introContent {
+        font-size: 6vw;
+    }
+
+    .introTextDesc {
+        font-size: 6vw;
+    }
+
+    .introPara {
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .profPic {
+        right: 5vw;
+    }
+
+    .introContent {
+        font-size: 4vw;
+    }
+
+    .introTextDesc {
+        font-size: 4vw;
+    }
+
+    .introPara {
+        font-size: 3vw;
     }
 }

@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/johntrinhvu.github.io/static/css/main.c1d7d5ca.css",
-    "main.js": "/johntrinhvu.github.io/static/js/main.2d987062.js",
+    "main.css": "/johntrinhvu.github.io/static/css/main.5f5b54fe.css",
+    "main.js": "/johntrinhvu.github.io/static/js/main.02059e2c.js",
     "static/media/Headshot.png": "/johntrinhvu.github.io/static/media/Headshot.a450f1f6999fa2395498.png",
     "index.html": "/johntrinhvu.github.io/index.html",
-    "main.c1d7d5ca.css.map": "/johntrinhvu.github.io/static/css/main.c1d7d5ca.css.map",
-    "main.2d987062.js.map": "/johntrinhvu.github.io/static/js/main.2d987062.js.map"
+    "main.5f5b54fe.css.map": "/johntrinhvu.github.io/static/css/main.5f5b54fe.css.map",
+    "main.02059e2c.js.map": "/johntrinhvu.github.io/static/js/main.02059e2c.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1d7d5ca.css",
-    "static/js/main.2d987062.js"
+    "static/css/main.5f5b54fe.css",
+    "static/js/main.02059e2c.js"
   ]
 }

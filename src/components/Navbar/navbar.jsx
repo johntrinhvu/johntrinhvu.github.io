@@ -8,7 +8,7 @@ export default function Navbar() {
         <nav className="navbar">
             <div className="desktopMenu">
                 <Link className="desktopMenuListItem">home</Link>
-                <Link className="desktopMenuListItem">experience</Link>
+                <Link className="desktopMenuListItem">about</Link>
                 <Link className="desktopMenuListItem">projects</Link>
                 <Link className="desktopMenuListItem">resume</Link>
                 <Link className="desktopMenuListItem">contact</Link>
