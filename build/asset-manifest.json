@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "/johntrinhvu.github.io/static/css/main.291a4d56.css",
-    "main.js": "/johntrinhvu.github.io/static/js/main.47f18c98.js",
+    "main.css": "/johntrinhvu.github.io/static/css/main.ee7e88ba.css",
+    "main.js": "/johntrinhvu.github.io/static/js/main.47566add.js",
+    "static/media/Portfolio1.png": "/johntrinhvu.github.io/static/media/Portfolio1.0eac417abb4a076f0060.png",
     "static/media/Headshot.png": "/johntrinhvu.github.io/static/media/Headshot.a450f1f6999fa2395498.png",
+    "static/media/uiux.png": "/johntrinhvu.github.io/static/media/uiux.78f5813058587756ecfa.png",
+    "static/media/computer.jpeg": "/johntrinhvu.github.io/static/media/computer.943d0d7e48d72d5d5c77.jpeg",
+    "static/media/stack.png": "/johntrinhvu.github.io/static/media/stack.e1918a32ed2db4d1c1d5.png",
     "index.html": "/johntrinhvu.github.io/index.html",
-    "main.291a4d56.css.map": "/johntrinhvu.github.io/static/css/main.291a4d56.css.map",
-    "main.47f18c98.js.map": "/johntrinhvu.github.io/static/js/main.47f18c98.js.map"
+    "main.ee7e88ba.css.map": "/johntrinhvu.github.io/static/css/main.ee7e88ba.css.map",
+    "main.47566add.js.map": "/johntrinhvu.github.io/static/js/main.47566add.js.map"
   },
   "entrypoints": [
-    "static/css/main.291a4d56.css",
-    "static/js/main.47f18c98.js"
+    "static/css/main.ee7e88ba.css",
+    "static/js/main.47566add.js"
   ]
 }
