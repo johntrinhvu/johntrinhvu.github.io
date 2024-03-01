@@ -1,4 +1,7 @@
 import { NewspaperIcon } from "@heroicons/react/solid";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { jobs } from "../../data";
 
 export default function Resume() {
     return (
@@ -14,6 +17,51 @@ export default function Resume() {
                         in the field of Software Engineering. Despite being early in my career journey, I've sought out opportunities to apply 
                         my skills and knowledge in practical settings.
                     </p>
+                </div>
+                <div className="flex flex-wrap -m-4">
+                    <VerticalTimeline>
+                        {jobs.map((job) => (
+                            <VerticalTimelineElement
+                                contentStyle={{ background: '#271a34', color: '#fff'}}
+                                contentArrowStyle={{ borderRight: '7px solid #232631' }}
+                                iconStyle={{ background: job.iconBg }}
+                                icon={
+                                    <div className="flex justify-center items-center w-full h-full">
+                                        <img 
+                                            src={job.icon}
+                                            alt={job.company}
+                                            className="w-[60%] h-[60%] object-contain"
+                                        />
+                                    </div>
+                                }
+                                >
+                                    <div>
+                                        <h3 className="text-white text-[24px] font-bold text-left">
+                                            {job.title}
+                                        </h3>
+                                        <p className="text-secondary text-[16px] font-semibold text-left" style={{color: '#f3d5ff', fontSize: '16px', margin: 0 }}>
+                                           {job.company}
+                                        </p>
+                                        <p className="text-secondary text-left mt-5" style={{ color: '#8d6fab',fontSize: '14px', marginTop: '4px' }}>
+                                            {job.date}
+                                        </p>
+                                    </div>
+
+                                    <ul className="mt-5 list-disc ml-5 space-y-2">
+                                        {job.points.map((point, index) => (
+                                            <li
+                                                key={`job-point-${index}`}
+                                                className="text-white-100 text-[14px] pl-1 tracking-wider text-left"
+                                            >
+                                                {point}
+
+                                            </li>
+                                        ))}
+
+                                    </ul>
+                            </VerticalTimelineElement>
+                        ))}
+                    </VerticalTimeline>
                 </div>
             </div>
         </section>
