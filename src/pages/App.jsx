@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import About from "../components/About/About";
 import Skills from "../components/Skills/Skills";
-import Projects from "../components/Projects/Projects";
+import Portfolio from "../components/Portfolio/Portfolio";
 import Resume from "../components/Resume/Resume";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
@@ -13,7 +13,7 @@ export default function App() {
       <Navbar />
       <About />
       <Skills />
-      <Projects />
+      <Portfolio />
       <Resume />
       <Contact />
       <Footer />

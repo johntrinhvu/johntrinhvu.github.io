@@ -15,8 +15,8 @@ export default function Navbar() {
                     <a href="#skills" className="mr-5 hover:text-white transition ease-in duration-100">
                         Skills
                     </a>
-                    <a href="#projects" className="mr-5 hover:text-white transition ease-in duration-100">
-                        Projects
+                    <a href="#portfolio" className="mr-5 hover:text-white transition ease-in duration-100">
+                        Portfolio
                     </a>
                     <a href="#resume" className="mr-5 hover:text-white transition ease-in duration-100">
                         Resume
@@ -25,7 +25,7 @@ export default function Navbar() {
                         Contact
                     </a>
                 </nav>
-                <a href="https://github.com/johntrinhvu" className="inline-flex text-black items-center bg-white border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0 hover:text-purple-500 hover:bg-gray-100 transition ease-in duration-100">
+                <a href="https://github.com/johntrinhvu" className="inline-flex text-black items-center bg-white border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0 hover:text-purple-500 hover:bg-gray-100 transition ease-in duration-100" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon className="w-4 h-4 ml-1" icon={faGithub} />
                     &nbsp;
                     Github
