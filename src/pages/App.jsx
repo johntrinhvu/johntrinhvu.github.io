@@ -5,6 +5,7 @@ import Skills from "../components/Skills/Skills";
 import Portfolio from "../components/Portfolio/Portfolio";
 import Resume from "../components/Resume/Resume";
 import Contact from "../components/Contact/Contact";
+// import StarsCanvas from "../components/StarsCanvas/StarsCanvas";
 import Footer from "../components/Footer/Footer";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
       <Portfolio />
       <Resume />
       <Contact />
+      {/* <StarsCanvas /> */}
       <Footer />
     </main>
   );
