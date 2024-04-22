@@ -13,13 +13,13 @@ export default function About() {
                         SWE Undergraduate at UCI
                     </h1>
                     <p className="mb-8 leading-relaxed">
-                        As a full-stack developer and software engineering student, I bring a unique blend of 
-                        technical expertise and competitive drive to everything I do. Whether I'm building innovative 
+                        I am currently a student pursuing a Bachelor of Science in Software Engineering and a Minor in Mathematics. 
+                        I bring a unique blend of technical expertise and competitive drive to everything I do. Whether I'm building innovative 
                         software solutions, or playing at the highest level of Varsity League of Legends, I am always striving for excellence and pushing the boundaries of what's possible. 
                     </p>
                     <p className="mb-8 leading-relaxed">
-                        With a strong foundation in programming languages and web development frameworks, as well as a passion for gaming and esports, 
-                        I am poised to make a significant impact in both the tech industry and the gaming world.
+                        Some relevant courses that I have taken include: Boolean Logic and Discrete Structures, Discrete Mathematics for Computer Science, Computational Linear Algebra, Calculus I and II, 
+                        Programming with Software Libraries, Data Structure Implementation and Analysis, Design and Analysis of Algorithms, Computer Organization, Principles of Operating Systems, Software Analysis and Design, Data Management, and Project Management.
                     </p>
                     <div className="flex justify-center">
                         <a 

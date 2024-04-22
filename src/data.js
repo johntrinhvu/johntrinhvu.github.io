@@ -2,6 +2,8 @@ export const skills = [
     "Python",
     "Java",
     "C/C++",
+    "R",
+    "AI/ML",
     "MIPS Assembly",
     "JavaScript",
     "TypeScript",
@@ -17,6 +19,13 @@ export const skills = [
 ];
 
 export const projects = [
+    {
+        title: "Cardify",
+        subtitle: "UCLA Hackathon Project",
+        description: "Cardify allows users to create virtual business cards, which displays users' name, occupation, a short summary about themselves, email, phone number, and any social media links!",
+        image: "/Cardify.png",
+        link: "https://github.com/johntrinhvu/Cardify",
+    },
     {
         title: "Legends Lounge",
         subtitle: "MERN Stack Application",
@@ -54,7 +63,7 @@ export const jobs = [
         company: "UCI Office of Information Technology, GDIT & UGA",
         points: [
             "Developed software components, including user interface, REST API, and background processes.",
-            "Collaborated with the Development Lead to understand product requirements.",
+            "Collaborated with the Development Lead to understand product requirements and provide roughly 140 ServiceNow tickets in addition to closing around 80 JIRA tickets.",
             "Demonstrated proficiency in Java and SQL, as well as JPA specification, JavaScript (React JS), HTML, CSS, and relevant tools (JIRA, Git, IDEs), contributing to advanced programming projects.",
         ],
         icon: "/UCIOIT.jpeg",
