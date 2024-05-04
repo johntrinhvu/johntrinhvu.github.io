@@ -18,7 +18,7 @@ export default function Resume() {
                         my skills and knowledge in practical settings.
                     </p>
                     <br />
-                    <a href="https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:3a6c43d4-4dbd-498e-b589-e5c629673ad3" target="_blank" rel="noreferrer">
+                    <a href="https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:8d43874a-18ba-4c7d-b926-1b1af96bb46c" target="_blank" rel="noreferrer">
                         <button className="bg-white text-black rounded py-2 px-4 hover:text-purple-400 hover:bg-gray-200 transition ease-in duration-100">
                             Resume in PDF
                         </button>
