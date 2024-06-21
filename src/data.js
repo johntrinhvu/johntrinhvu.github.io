@@ -58,6 +58,36 @@ export const projects = [
 
 export const jobs = [
     {
+        title: "Software Engineer Intern",
+        date: "Jun 2024 - Current",
+        company: "Vee Friends, LLC",
+        points: [
+
+        ],
+        icon: "",
+        iconbg: "",
+    },
+    {
+        title: "Full-Stack Software Engineer",
+        date: "May 2024 - Current",
+        company: "Land and Ritual",
+        points: [
+
+        ],
+        icon: "",
+        iconbg: "",
+    },
+    {
+        title: "Front-End Software Engineer",
+        date: "Apr 2024 - Current",
+        company: "Mingley",
+        points: [
+
+        ],
+        icon: "",
+        iconbg: "",
+    },
+    {
         title: "Software Developer",
         date: "Nov 2023 - Current",
         company: "UCI Office of Information Technology, GDIT & UGA",
