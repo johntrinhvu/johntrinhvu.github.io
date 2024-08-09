@@ -1,11 +1,11 @@
 import { NewspaperIcon } from "@heroicons/react/solid";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { jobs } from "../../data";
+import { jobs } from "../../data.ts";
 
-export default function Resume() {
+export default function Experience() {
     return (
-        <section id="resume" className="scroll-margin-top text-gray-400 bg-gray-900 body-font">
+        <section id="experience" className="scroll-margin-top text-gray-400 bg-gray-900 body-font">
             <div className="container px-5 py-10 mx-auto text-center lg:px-40">
                 <div className="flex flex-col w-full mb-20">
                     <NewspaperIcon className="mx-auto inline-block w-10 mb-4 text-purple-400" />
@@ -18,7 +18,7 @@ export default function Resume() {
                         my skills and knowledge in practical settings.
                     </p>
                     <br />
-                    <a href="https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:8d43874a-18ba-4c7d-b926-1b1af96bb46c" target="_blank" rel="noreferrer">
+                    <a href="https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:cb7e7610-68b8-4efe-8b7e-ec8608826500" target="_blank" rel="noreferrer">
                         <button className="bg-white text-black rounded py-2 px-4 hover:text-purple-400 hover:bg-gray-200 transition ease-in duration-100">
                             Resume in PDF
                         </button>
