@@ -74,7 +74,7 @@ export const projects = [
         title: "Cardify",
         subtitle: "Virtual Business Card Creator",
         description: "Allows users to create virtual business cards, which displays users' name, occupation, a short summary about themselves.",
-        tags: ["React.js", "Mongo DB", "Express.js", "Node.js", "Gemini AI"],
+        tags: ["Gemini AI", "React.js", "Mongo DB", "Express.js", "Node.js"],
         imageUrl: cardifyImg,
         link: "https://github.com/johntrinhvu/Cardify",
     },
