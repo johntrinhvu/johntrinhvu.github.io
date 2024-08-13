@@ -69,7 +69,7 @@ export default function About() {
                 <p className="mb-3">
                     I am a third year pursuing a <span className="text-violet-400">B.S. in Software Engineering</span> and a <span className="text-violet-400">Minor in Mathematics</span>{" "}
                     at the <span className="text-blue-300 font-semibold italic">University of California, Irvine</span>. Midway through college, I had enrolled in a 
-                    coding bootcamp to learn full-sack web development, further pushing my career and allowing me to grow
+                    coding bootcamp to learn full-stack web development, further pushing my career and allowing me to grow
                     and enjoy software engineering even more. My favorite part of programming is the <span className="text-violet-400">problem-solving aspect</span>, and I love
                     being able to figure out solutions to problems.
                 </p>
