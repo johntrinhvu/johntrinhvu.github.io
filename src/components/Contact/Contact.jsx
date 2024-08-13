@@ -138,7 +138,7 @@ export default function Contact() {
                         //   onChange={(e) => setMessage(e.target.value)}
                         />
                     </div>
-                    <button type="submit" value="Send" className="text-purple-100 bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg hover:text-white transition ease-in duration-100">
+                    <button type="submit" value="Send" className="text-purple-100 bg-purple-700 border-0 py-2 px-6 focus:outline-none hover:bg-purple-900 rounded text-lg hover:text-white transition ease-in duration-100">
                         Submit
                     </button>
                 </form>

@@ -12,7 +12,6 @@ import Footer from "../components/Footer/Footer";
 
 export default function App() {
   return (
-    // <body className="font-ubuntu text-gray-400 bg-gray-900 body-font">
     <body
       className="text-opacity-90 flex flex-col items-center px-4 font-ubuntu text-gray-300 relative pt-28 sm:pt-36"
     >

@@ -22,7 +22,7 @@ export default function Intro() {
                         transition={{ type: "tween", duration: 0.2 }}
                     >
                         <img 
-                            className="object-cover object-center rounded-full h-24 w-24 border-[0.35rem] border-white object-cover shadow-xl"
+                            className="object-cover object-center rounded-full h-24 w-24 border-[0.10rem] border-white object-cover shadow-xl"
                             src={Headshot}
                             alt="John Vu Headshot"
                             width="192"
@@ -31,15 +31,6 @@ export default function Intro() {
                             priority={true}
                         />
                     </motion.div>
-
-                    <motion.span 
-                        className="absolute bottom-0 right-0 text-4xl"
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ type: "spring", stiffness: 125, delay: 0.1, duration: 0.7 }}
-                    >
-                        👋
-                    </motion.span>
                 </div>
             </div>
 
@@ -60,7 +51,7 @@ export default function Intro() {
             >   
                 <a
                     href="#contact"
-                    className="group bg-purple-800 text-purple-100 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-purple-950 active:scale-105 transition"
+                    className="group bg-purple-800 text-purple-100 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-purple-900 active:scale-105 transition"
                     onClick={() => {
                         setActiveSection("Contact");
                         setTimeOfLastClick(Date.now());

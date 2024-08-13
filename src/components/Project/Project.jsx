@@ -28,7 +28,7 @@ export default function Project(props) {
                 >
 
                 <section 
-                    className="border-gray-700 text-white bg-gray-800 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-slate-700 transition cursor-pointer"
+                    className="border-gray-700 text-white bg-gray-800 max-w-[42rem] border border-2 border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-slate-700 transition cursor-pointer"
                 >
                     <div className="pb-4 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
                         <h3 

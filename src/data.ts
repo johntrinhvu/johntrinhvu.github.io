@@ -121,7 +121,7 @@ export const jobs = [
         date: "Jun 2024 - Current",
         company: "Vee Friends, LLC",
         points: [
-            "Redesigned and developed several front-end components of the company website, speeding up loading time and resulting in a 20% increase in ticket sales for VeeCon events, and a > 50% proficiency increase in concierge meetings.",
+            "Redesigned and developed several front-end components of the company website, speeding up loading time and resulting in a 20% increase in ticket sales for VeeCon events, and up to a 50% proficiency increase in concierge meetings.",
             "Partnered with the back-end lead to gain helpful insights into the back-end processes at Vee Friends, to better understand the integration process and functionality of front-end components with back-end systems."
         ],
         icon: veeFriendLogo,

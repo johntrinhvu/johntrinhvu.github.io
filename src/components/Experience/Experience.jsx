@@ -16,26 +16,29 @@ export default function Experience() {
         >
             <div className="text-center">
                 <NewspaperIcon className="w-12 inline-block mb-4 text-purple-400" /> 
-                 <h1 className="text-gray-100 text-3xl font-semibold mb-8 ml-auto mr-auto">Experience</h1>
-                <h3 className="text-gray-200 text-base font-semibold ml-auto mr-auto max-w-4xl">
-                    Alongside my current experience, some relevant courses that I have taken in university include but not all:
-                </h3>
-                 <p className="text-gray-200 mt-3 mb-3 pl-0 ml-auto mr-auto max-w-4xl">
-                    <span className="font-semibold text-indigo-300 italic">Computational Linear Algebra</span>, Boolean Logic and Discrete Structures, Discrete Mathematics for Computer Science, Calculus I and II, 
-                    Programming with Software Libraries, <span className="font-semibold text-indigo-300 italic">Data Structure Implementation and Analysis</span>, Computer Organization,{" "} 
-                    <span className="font-semibold text-indigo-300 italic">Design and Analysis of Algorithms</span>, Principles of Operating Systems, Software Analysis and Design, Data Management, Project Management, and Product Management. 
-                 </p>
+                <h1 className="text-gray-100 text-3xl font-semibold mb-8 ml-auto mr-auto">Experience</h1>
+                <div className="bg-gray-800 rounded-xl border-2 border-gray-700 p-4 mb-3 mx-auto max-w-md sm:max-w-xl md:max-w-2xl">
+                    <h3 className="text-gray-200 text-base font-semibold ml-auto mr-auto max-w-4xl">
+                        Alongside my current experience, some relevant courses that I have taken in university include but not all:
+                    </h3>
+                    <p className="text-gray-200 mt-3 mb-3 pl-0 ml-auto mr-auto max-w-4xl">
+                        <span className="font-semibold text-violet-400 italic">Computational Linear Algebra</span>, Boolean Logic and Discrete Structures, Discrete Mathematics for Computer Science, Calculus I and II, 
+                        Programming with Software Libraries, <span className="font-semibold text-violet-400 italic">Data Structure Implementation and Analysis</span>, Computer Organization,{" "} 
+                        <span className="font-semibold text-violet-400 italic">Design and Analysis of Algorithms</span>, Principles of Operating Systems, Software Analysis and Design, Data Management, Project Management, and Product Management. 
+                    </p>
+                </div>
             </div>
-            <VerticalTimeline lineColor="white">
+            <VerticalTimeline lineColor="rgb(139 92 246)">
                 {jobs.map((item, index) => (
                     <React.Fragment key={index}>
                         <VerticalTimelineElement
                             contentStyle={{
-                                background: "rgba(255, 255, 255, 0.05)",
+                                background: "rgb(31 41 55)",
                                 boxShadow: "none",
-                                border: "1px solid rgba(0, 0, 0, 0.05)",
+                                border: "2px solid rgb(55, 65, 81)",
                                 textAlign: "left",
-                                padding: "1.3rem 2rem"
+                                padding: "1.3rem 2rem",
+                                borderRadius: "0.75rem"
                             }}
                             contentArrowStyle={{
                                 borderRight: "0.4rem solid rgba(255, 255, 255, 0.5)"
