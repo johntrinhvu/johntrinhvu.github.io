@@ -8,7 +8,6 @@ import { useSectionInView } from "../../hooks.tsx";
 
 export default function Intro() {
     const { ref } = useSectionInView("Home", 0.95);
-    // const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
     return (
         <section ref={ref} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
@@ -48,9 +47,7 @@ export default function Intro() {
                 animate={{ opacity: 1, y: 0 }}
             >
                 Hello, I'm <span className="font-bold text-purple-800">John Trinh Vu.</span> I'm a{" "}
-                <span className="font-bold">Full Stack Developer</span> and{" "}
-                <span className="font-bold">SWE Undergrauate</span> at{" "}
-                <span className="font-bold">UCI</span>.
+                <span className="font-bold">Full Stack Software Developer</span>.
             </motion.h1>
 
             <motion.div

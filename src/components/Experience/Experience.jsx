@@ -1,76 +1,81 @@
+import React from "react";
 import { NewspaperIcon } from "@heroicons/react/solid";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { jobs } from "../../data.ts";
+import { useSectionInView } from "../../hooks.tsx";
 
 export default function Experience() {
+    const { ref } = useSectionInView("Experience", 0.15);
+
     return (
-        <section id="experience" className="scroll-margin-top text-gray-400 bg-gray-900 body-font">
-            <div className="container px-5 py-10 mx-auto text-center lg:px-40">
-                <div className="flex flex-col w-full mb-20">
-                    <NewspaperIcon className="mx-auto inline-block w-10 mb-4 text-purple-400" />
-                    <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
-                        Work Experience
-                    </h1>
-                    <p className="lg:w-2/3 mx-auto leading-related text-base">
-                        While I'm currently a student in college, I've eagerly pursued opportunities to gain real-world experience 
-                        in the field of Software Engineering. Despite being early in my career journey, I've sought out opportunities to apply 
-                        my skills and knowledge in practical settings.
-                    </p>
-                    <br />
-                    <a href="https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:cb7e7610-68b8-4efe-8b7e-ec8608826500" target="_blank" rel="noreferrer">
-                        <button className="bg-white text-black rounded py-2 px-4 hover:text-purple-400 hover:bg-gray-200 transition ease-in duration-100">
-                            Resume in PDF
-                        </button>
-                    </a>
-                </div>
-                <div className="flex flex-wrap -m-4">
-                    <VerticalTimeline>
-                        {jobs.map((job) => (
-                            <VerticalTimelineElement
-                                contentStyle={{ background: '#271a34', color: '#fff'}}
-                                contentArrowStyle={{ borderRight: '7px solid #271a34' }}
-                                iconStyle={{ background: job.iconBg }}
-                                icon={
-                                    <div className="flex justify-center items-center w-full h-full">
-                                        <img 
-                                            src={job.icon}
-                                            alt={job.company}
-                                            className="w-[60%] h-[60%] object-contain"
-                                        />
-                                    </div>
-                                }
-                                >
-                                    <div>
-                                        <h3 className="text-white text-[24px] font-bold text-left">
-                                            {job.title}
-                                        </h3>
-                                        <p className="text-secondary text-[16px] font-semibold text-left" style={{color: '#f3d5ff', fontSize: '16px', margin: 0 }}>
-                                           {job.company}
-                                        </p>
-                                        <p className="text-secondary text-left mt-5" style={{ color: '#8d6fab',fontSize: '14px', marginTop: '4px' }}>
-                                            {job.date}
-                                        </p>
-                                    </div>
-
-                                    <ul className="mt-5 list-disc ml-5 space-y-2">
-                                        {job.points.map((point, index) => (
-                                            <li
-                                                key={`job-point-${index}`}
-                                                className="text-white-100 text-[14px] pl-1 tracking-wider text-left"
-                                            >
-                                                {point}
-
-                                            </li>
-                                        ))}
-
-                                    </ul>
-                            </VerticalTimelineElement>
-                        ))}
-                    </VerticalTimeline>
-                </div>
+        <section
+            id="experience"
+            ref={ref}
+            className="scroll-mt-28 mb-28 sm:mb-40"
+        >
+            <div className="text-center">
+                <NewspaperIcon className="w-12 inline-block mb-4 text-purple-400" /> 
+                 <h1 className="text-3xl font-semibold mb-8 ml-auto mr-auto">Experience</h1>
+                <h3 className="text-base font-semibold ml-auto mr-auto max-w-4xl">
+                    Alongside my current experience, some relevant courses that I have taken in university include but not all:
+                </h3>
+                 <p className="mt-3 mb-3 pl-0 ml-auto mr-auto max-w-4xl">
+                    Boolean Logic and Discrete Structures, Discrete Mathematics for Computer Science, <span className="font-medium">Computational Linear Algebra</span>, Calculus I and II, 
+                    Programming with Software Libraries, <span className="font-medium">Data Structure Implementation and Analysis</span>, Computer Organization, 
+                    Principles of Operating Systems, <span className="font-semibold">Design and Analysis of Algorithms</span>, Software Analysis and Design, Data Management, Project Management, and Product Management. 
+                 </p>
             </div>
+            <VerticalTimeline lineColor="gray">
+                {jobs.map((item, index) => (
+                    <React.Fragment key={index}>
+                        <VerticalTimelineElement
+                            contentStyle={{
+                                background: "#f3f4f6",
+                                boxShadow: "none",
+                                border: "1px solid rgba(0, 0, 0, 0.05)",
+                                textAlign: "left",
+                                padding: "1.3rem 2rem"
+                            }}
+                            contentArrowStyle={{
+                                borderRight: "0.4rem solid #9ca3af"
+                            }}
+                            icon={
+                                <div className="flex justify-center items-center w-full h-full">
+                                    <img 
+                                        src={item.icon}
+                                        alt={item.company}
+                                        className="w-[65%] h-[65%] object-contain mt-1"
+                                    />
+                                </div>
+                            }
+                            iconStyle={{
+                                background: item.iconBg,
+                            }}
+                        >
+                            <div>
+                                <h3 className="font-semibold capitalize">{item.title}</h3>
+                                <p className="text-secondary text-[16px] font-semibold text-left" style={{color: '#f3d5ff', fontSize: '16px', margin: 0 }}>
+                                    {item.company}
+                                </p>
+                                <p className="text-secondary text-left mt-5" style={{ color: '#8d6fab',fontSize: '14px', marginTop: '4px' }}>
+                                    {item.date}
+                                </p>
+                            </div>
+                            <ul className="mt-5 list-disc ml-5 space-y-2">
+                                {item.points.map((point, idx) => (
+                                    <li
+                                        key={`job-point-${idx}`}
+                                        className="text-white-100 text-[14px] pl-1 tracking-wider text-left"
+                                    >
+                                        {point}
+                                    </li>
+                                ))}
+                            </ul>
+                        </VerticalTimelineElement>
+                    </React.Fragment>
+                ))}
+            </VerticalTimeline>
         </section>
-    );
+    )
 }
-

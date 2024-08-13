@@ -1,7 +1,10 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+import { useSectionInView } from "../../hooks.tsx";
 
 export default function Contact() {
+    const { ref } = useSectionInView("Contact", 0.25);
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -19,7 +22,23 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="relative">
+        <motion.section 
+            id="contact" 
+            className="relative"
+            ref={ref}
+            initial={{
+                opacity: 0,
+            }}
+            whileInView={{
+                opacity: 1,
+            }}
+            transition={{
+                duration: 1,
+            }}
+            viewport={{
+                once: true,
+            }}
+        >
             <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
                 <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
                     <iframe 
@@ -64,7 +83,7 @@ export default function Contact() {
                   name="contact"
                   onSubmit={sendEmail}
                   className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-                    <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
+                    <h2 className="sm:text-4xl text-3xl mb-1 font-semibold title-font">
                         Contact Me
                     </h2>
                     <p className="leading-relaxed mb-5">
@@ -124,6 +143,6 @@ export default function Contact() {
                     </button>
                 </form>
             </div>
-        </section>
+        </motion.section>
     );
 }

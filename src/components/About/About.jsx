@@ -64,11 +64,18 @@ export default function About() {
             ref={ref}
         >
             <FontAwesomeIcon className="text-purple-400 text-4xl" icon={faAddressCard} />
-            <h1 className="text-3xl font-medium mb-8">About Me</h1>
+            <h1 className="text-3xl font-semibold mb-8">About Me</h1>
             <p className="mb-3">
-                I am pursuing a Bachelor of Science in Software Engineering and a Minor in Mathematics. 
-                I bring a unique blend of technical expertise and competitive drive to everything I do. Whether I'm building
-                software, coding on Leetcode, or playing at the highest level of League of Legends, I am always striving for excellence.
+                I am a third year pursuing a B.S. in Software Engineering and a Minor in Mathematics
+                at the <span>University of California, Irvine</span>. Midway through college, I had enrolled in a 
+                coding bootcamp to learn full-sack web development, further pushing my career and allowing me to grow
+                and enjoy software engineering even more. My favorite part of programming is the problem-solving aspect, and I love
+                being able to figure out solutions to problems.
+            </p>
+            <p>
+                When I'm not coding, I enjoy playing video games, playing guitar and piano, lifting weights, and going on
+                hikes. I mainly enjoy being able to practice and hone the skillsets that I already have, but I am always open to
+                explore new hobbies and things to do.
             </p>
 
             {/* <p>

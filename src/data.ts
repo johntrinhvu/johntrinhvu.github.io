@@ -6,6 +6,9 @@ import fitnessImg from "./images/FitnessTracker.png";
 import uciOIT from "./images/UCIOIT.jpeg";
 import gaImg from "./images/GA.png";
 import ucieImg from "./images/UCIE.png";
+import mingleyImg from "./images/mingley.png";
+import veeFriendLogo from "./images/veefriends.png";
+import landNRitualLogo from "./images/landandritual.png";
 
 export const links = [
     {
@@ -118,41 +121,43 @@ export const jobs = [
         date: "Jun 2024 - Current",
         company: "Vee Friends, LLC",
         points: [
-
+            "Redesigned and developed several front-end components of the company website, speeding up loading time and resulting in a 20% increase in ticket sales for VeeCon events, and a > 50% proficiency increase in concierge meetings.",
+            "Partnered with the back-end lead to gain helpful insights into the back-end processes at Vee Friends, to better understand the integration process and functionality of front-end components with back-end systems."
         ],
-        icon: "",
-        iconbg: "",
+        icon: veeFriendLogo,
+        iconBg: "#fff",
     },
     {
         title: "Full-Stack Software Engineer",
         date: "May 2024 - Current",
         company: "Land and Ritual",
         points: [
-
+            "Created a framework for a San Francisco-based skincare company, in collaboration with a team of 3 engineers, designing and implementing user friendly front-end interfaces and back-end APIs.",
+            "Managed both version control and code quality as Git manager, ensuring and maintaining high standards of code following an MVC framework, as well as following the SDLC."
         ],
-        icon: "",
-        iconbg: "",
+        icon: landNRitualLogo,
+        iconBg: "#fff",
     },
     {
         title: "Front-End Software Engineer",
         date: "Apr 2024 - Current",
         company: "Mingley",
         points: [
-
+            "Engineered and deployed a mobile iOS login and registration page from scratch single-handedly within a team of 8.",
+            "Led a team of 3 engineers, consisting of 1 front-end and 1 UI/UX engineer, to build the company's user interface."
         ],
-        icon: "",
-        iconbg: "",
+        icon: mingleyImg,
+        iconBg: "#fff",
     },
     {
         title: "Software Developer",
         date: "Nov 2023 - Current",
         company: "UCI Office of Information Technology, GDIT & UGA",
         points: [
-            "Developed software components, including user interface, REST API, and background processes.",
-            "Collaborated with the Development Lead to understand product requirements and provide roughly 140 ServiceNow tickets in addition to closing around 80 JIRA tickets.",
-            "Demonstrated proficiency in Java and SQL, as well as JPA specification, JavaScript (React JS), HTML, CSS, and relevant tools (JIRA, Git, IDEs), contributing to advanced programming projects.",
+            "Collaborated with the Development Lead to understand product requirements and provide roughly 230 ServiceNow tickets in addition to closing around 120 JIRA tickets.",
+            "Execute several SQL queries to retrieve, analyze, and manage critical data.",
         ],
-        icon: "/UCIOIT.jpeg",
+        icon: uciOIT, 
         iconBg: "#fff",
     },
     {
@@ -166,7 +171,7 @@ export const jobs = [
             "Collaborated with 3 cross-functional engineering teams to orchestrate the integration of diverse APIs.",
             "Built a full-stack MERN application within a 4-day deadline that is tailored for League of Legends enthusiasts, including the game's five roles: Top, Jungle, Mid, ADC, and Support; ensuring JWT Authentication to ensure secure access, as well as desigining RESTful APIs, and enabling full CRUD operations on posts.",
         ],
-        icon: "/GA.png",
+        icon: gaImg,
         iconBg: "#fff",
     },
     {
@@ -178,7 +183,7 @@ export const jobs = [
             "Proficiently managed and administered Active Directory for over 200 users, facilitating account management, security protocols, group policy configurations, and system maintenance.",
             "Utilized remote desktop tools to provide technical assistance, troubleshooting, and issue resolution for around 700 users."
         ],
-        icon: "/UCIOIT.jpeg",
+        icon: uciOIT,
         iconBg: "#fff",
     },
     {
@@ -191,8 +196,7 @@ export const jobs = [
             "Led the team to an impressive 1st place finish in a highly competitive tournament, leveraging exceptional leadership and team morale skills.",
             "Provided unwavering support and motivation to the team during adversity, helping maintain team morale and focus in difficult situations. Played a pivotal role in turning challenging moments into learning experiences for the team.",
         ],
-        icon: "/UCIE.png",
+        icon: ucieImg,
         iconBg: "#fff",
     },
-
 ] as const;

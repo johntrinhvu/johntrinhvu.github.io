@@ -4,8 +4,8 @@ import React from "react";
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-800 text-white text-center py-4">
-            <div className="container mx-auto flex flex-wrap justify-between items-center">
+        <footer className="text-white text-center py-4 w-full">
+            <div className="mx-auto flex justify-between items-center">
                 {/* Left Section */}
                 <div>
                     <h1 className="font-semibold text-purple-400">Developed and Designed</h1>

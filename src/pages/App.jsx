@@ -26,10 +26,10 @@ export default function App() {
         <About />
         <Skills />
         <Portfolio />
+        <Experience />
+        <Contact />
+        <Footer />
       </ActiveSectionContextProvider>
-      {/* <Experience /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
     </body>
   );
 };
