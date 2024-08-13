@@ -4,13 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Headshot from "../../images/Headshot.png";
+import { useSectionInView } from "../../hooks.tsx";
 
 export default function Intro() {
-    // const { ref } = useSectionInView("Home", 0.5);
+    const { ref } = useSectionInView("Home", 0.95);
     // const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
     return (
-        <section id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+        <section ref={ref} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
             <div className="flex items-center justify-center">
                 <div className="relative">
                     <motion.div

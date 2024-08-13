@@ -1,8 +1,3 @@
-import { BadgeCheckIcon, ChipIcon } from "@heroicons/react/solid";
-import React from "react";
-import { skills } from "../../data.ts";
-import { motion } from "framer-motion";
-
 // export default function Skills() {
 //     return (
 //         <section id="skills" className="scroll-margin-top">
@@ -34,6 +29,14 @@ import { motion } from "framer-motion";
 //         </section>
 //     );
 // }
+"use client";
+
+import { BadgeCheckIcon, ChipIcon } from "@heroicons/react/solid";
+import React from "react";
+import { skills } from "../../data.ts";
+import { motion } from "framer-motion";
+import { useSectionInView } from "../../hooks.tsx";
+
 const fadeInAnimationVariants = {
     initial: {
         opacity: 0,
@@ -49,9 +52,11 @@ const fadeInAnimationVariants = {
 };
 
 export default function Skills() {
+    const { ref } = useSectionInView("Skills", 0.3);
 
     return (
         <motion.section
+            ref={ref}
             id="skills"
             className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
             initial={{ opacity: 0, y: 100 }}

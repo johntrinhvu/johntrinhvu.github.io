@@ -1,4 +1,5 @@
 import React from "react";
+import ActiveSectionContextProvider from "../context/ActiveSectionContext/ActiveSectionContext.tsx";
 import Header from "../components/Header/Header";
 import Intro from "../components/Intro/Intro";
 import SectionDivider from "../components/SectionDivider/SectionDivider";
@@ -17,12 +18,15 @@ export default function App() {
     >
       <div className="bg-gray-900 absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
       <div className="bg-purple-300 absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
-      <Header />
-      <Intro />
-      <SectionDivider />
-      <About />
-      <Skills />
-      <Portfolio />
+
+      <ActiveSectionContextProvider>
+        <Header />
+        <Intro />
+        <SectionDivider />
+        <About />
+        <Skills />
+        <Portfolio />
+      </ActiveSectionContextProvider>
       {/* <Experience /> */}
       {/* <Contact /> */}
       {/* <Footer /> */}

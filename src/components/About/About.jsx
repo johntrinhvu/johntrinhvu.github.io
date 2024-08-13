@@ -49,8 +49,11 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAddressCard } from "@fortawesome/free-regular-svg-icons";
 import { motion } from "framer-motion";
+import { useSectionInView } from "../../hooks.tsx";
 
 export default function About() {
+    const { ref } = useSectionInView("About", 0.9);
+
     return (
         <motion.section 
             id="about"
@@ -58,6 +61,7 @@ export default function About() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.175 }}
+            ref={ref}
         >
             <FontAwesomeIcon className="text-purple-400 text-4xl" icon={faAddressCard} />
             <h1 className="text-3xl font-medium mb-8">About Me</h1>

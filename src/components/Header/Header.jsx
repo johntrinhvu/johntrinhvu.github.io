@@ -1,10 +1,13 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { links } from "../../data.ts";
+import clsx from "clsx";
+import { useActiveSectionContext } from "../../context/ActiveSectionContext/ActiveSectionContext.tsx";
+
 
 export default function Header() {
+    const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
     return (
         <header className="z-[999] relative">
             <motion.div 
@@ -23,13 +26,36 @@ export default function Header() {
                     {
                         links.map(link => (
                             <motion.li 
-                                className="h-3/4 flex items-center justify-center"
+                                className="h-3/4 flex items-center justify-center relative"
                                 key={link.hash}
                                 initial={{ y: -100, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                             >
-                                    <a className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition" href={link.hash}>
+                                    <a 
+                                        className={clsx("flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition", {
+                                            "text-gray-950" : activeSection === link.name,
+                                        })} 
+                                        href={link.hash}
+                                        onClick={() => {
+                                            setActiveSection(link.name)
+                                            setTimeOfLastClick(Date.now())
+                                        }}
+                                    >
                                         {link.name}
+                                        {
+                                            link.name === activeSection && (
+                                                <motion.span 
+                                                    className="bg-gray-100 rounded-full absolute inset-0 -z-10"
+                                                    layoutId="activeSection"
+                                                    transition={{
+                                                        type: "spring",
+                                                        stiffness: 380,
+                                                        damping: 30,
+                                                    }}
+                                                >
+                                                </motion.span>
+                                            )
+                                        }
                                     </a>
                             </motion.li>
                         ))
