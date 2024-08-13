@@ -5,9 +5,11 @@ import { faArrowRight, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Headshot from "../../images/Headshot.png";
 import { useSectionInView } from "../../hooks.tsx";
+import { useActiveSectionContext } from "../../context/ActiveSectionContext/ActiveSectionContext.tsx";
 
 export default function Intro() {
     const { ref } = useSectionInView("Home", 0.95);
+    const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
     return (
         <section ref={ref} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
@@ -59,6 +61,10 @@ export default function Intro() {
                 <a
                     href="#contact"
                     className="group bg-purple-800 text-purple-100 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-purple-950 active:scale-105 transition"
+                    onClick={() => {
+                        setActiveSection("Contact");
+                        setTimeOfLastClick(Date.now());
+                    }}
                 >
                     Contact me here{" "}
                     <FontAwesomeIcon className="opacity-70 group-hover:translate-x-1 transition" icon={faArrowRight} />

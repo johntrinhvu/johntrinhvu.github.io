@@ -33,11 +33,11 @@ export default function Skills() {
             transition={{ delay: 0.175 }}
         >
             <ChipIcon className="w-12 inline-block mb-4 text-purple-400" /> 
-            <h1 className="text-3xl font-semibold mb-8">Skills and Technologies</h1>
+            <h1 className="text-gray-100 text-3xl font-semibold mb-8">Skills and Technologies</h1>
             <ul className="flex flex-wrap justify-center gap-2 text-lg">
                 {skills.map((skill, index) => (
                     <motion.li
-                        className="bg-white border-black rounded-xl px-5 py-3"
+                        className="border-black rounded-xl px-5 py-3"
                         key={index}
                         variants={fadeInAnimationVariants}
                         initial="initial"
@@ -47,7 +47,7 @@ export default function Skills() {
                         }}
                         custom={index}
                     >
-                        <div className="flex bg-gray-100 px-5 py-3 border-gray-200 border-2 rounded-xl">
+                        <div className="flex bg-gray-800 px-5 py-3 border-gray-700 border-2 rounded-xl">
                             <BadgeCheckIcon className="text-purple-400 w-6 h-6 flex-shrink-0 mr-4" />
                             <span className="title-font font-medium">
                                 {skill}

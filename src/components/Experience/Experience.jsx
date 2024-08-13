@@ -16,29 +16,29 @@ export default function Experience() {
         >
             <div className="text-center">
                 <NewspaperIcon className="w-12 inline-block mb-4 text-purple-400" /> 
-                 <h1 className="text-3xl font-semibold mb-8 ml-auto mr-auto">Experience</h1>
-                <h3 className="text-base font-semibold ml-auto mr-auto max-w-4xl">
+                 <h1 className="text-gray-100 text-3xl font-semibold mb-8 ml-auto mr-auto">Experience</h1>
+                <h3 className="text-gray-200 text-base font-semibold ml-auto mr-auto max-w-4xl">
                     Alongside my current experience, some relevant courses that I have taken in university include but not all:
                 </h3>
-                 <p className="mt-3 mb-3 pl-0 ml-auto mr-auto max-w-4xl">
-                    Boolean Logic and Discrete Structures, Discrete Mathematics for Computer Science, <span className="font-medium">Computational Linear Algebra</span>, Calculus I and II, 
-                    Programming with Software Libraries, <span className="font-medium">Data Structure Implementation and Analysis</span>, Computer Organization, 
-                    Principles of Operating Systems, <span className="font-semibold">Design and Analysis of Algorithms</span>, Software Analysis and Design, Data Management, Project Management, and Product Management. 
+                 <p className="text-gray-200 mt-3 mb-3 pl-0 ml-auto mr-auto max-w-4xl">
+                    <span className="font-semibold text-indigo-300 italic">Computational Linear Algebra</span>, Boolean Logic and Discrete Structures, Discrete Mathematics for Computer Science, Calculus I and II, 
+                    Programming with Software Libraries, <span className="font-semibold text-indigo-300 italic">Data Structure Implementation and Analysis</span>, Computer Organization,{" "} 
+                    <span className="font-semibold text-indigo-300 italic">Design and Analysis of Algorithms</span>, Principles of Operating Systems, Software Analysis and Design, Data Management, Project Management, and Product Management. 
                  </p>
             </div>
-            <VerticalTimeline lineColor="gray">
+            <VerticalTimeline lineColor="white">
                 {jobs.map((item, index) => (
                     <React.Fragment key={index}>
                         <VerticalTimelineElement
                             contentStyle={{
-                                background: "#f3f4f6",
+                                background: "rgba(255, 255, 255, 0.05)",
                                 boxShadow: "none",
                                 border: "1px solid rgba(0, 0, 0, 0.05)",
                                 textAlign: "left",
                                 padding: "1.3rem 2rem"
                             }}
                             contentArrowStyle={{
-                                borderRight: "0.4rem solid #9ca3af"
+                                borderRight: "0.4rem solid rgba(255, 255, 255, 0.5)"
                             }}
                             icon={
                                 <div className="flex justify-center items-center w-full h-full">
@@ -54,11 +54,11 @@ export default function Experience() {
                             }}
                         >
                             <div>
-                                <h3 className="font-semibold capitalize">{item.title}</h3>
-                                <p className="text-secondary text-[16px] font-semibold text-left" style={{color: '#f3d5ff', fontSize: '16px', margin: 0 }}>
+                                <h3 className="font-semibold capitalize text-gray-100">{item.title}</h3>
+                                <p className="text-secondary text-[16px] font-semibold text-left text-violet-300" style={{fontSize: '16px', margin: 0 }}>
                                     {item.company}
                                 </p>
-                                <p className="text-secondary text-left mt-5" style={{ color: '#8d6fab',fontSize: '14px', marginTop: '4px' }}>
+                                <p className="text-secondary text-left mt-5 text-violet-500" style={{fontSize: '14px', marginTop: '4px' }}>
                                     {item.date}
                                 </p>
                             </div>
@@ -66,7 +66,7 @@ export default function Experience() {
                                 {item.points.map((point, idx) => (
                                     <li
                                         key={`job-point-${idx}`}
-                                        className="text-white-100 text-[14px] pl-1 tracking-wider text-left"
+                                        className="text-slate-100 text-[14px] pl-1 tracking-wider text-left"
                                     >
                                         {point}
                                     </li>

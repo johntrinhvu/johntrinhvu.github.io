@@ -17,13 +17,13 @@ export default function Footer() {
                     <h1 className="font-bold text-left text-purple-400">Socials</h1>
                     <div className="flex justify-end">
                         <a href="https://www.linkedin.com/in/johntrinhvu/" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon className="w-6 h-6 text-gray-300" icon={faLinkedin} />
+                            <FontAwesomeIcon className="hover:text-white w-6 h-6 text-gray-300 transition" icon={faLinkedin} />
                         </a>
                         <a href="https://github.com/johntrinhvu" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon className="w-6 h-6 ml-1 text-gray-300" icon={faGithub} />
+                            <FontAwesomeIcon className="hover:text-white w-6 h-6 ml-1 text-gray-300 transition" icon={faGithub} />
                         </a>
                         <a href="https://twitter.com/lolsahori" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon className="w-6 h-6 ml-1 text-gray-300" icon={faXTwitter} />
+                            <FontAwesomeIcon className="hover:text-white w-6 h-6 ml-1 text-gray-300 transition" icon={faXTwitter} />
                         </a>
                     </div>
                 </div>

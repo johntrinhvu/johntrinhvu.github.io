@@ -1,16 +1,4 @@
 html {
     scroll-behavior: smooth;
+    background-color: rgb(17, 24, 39);
 }
-
-/* .scroll-margin-top {
-    scroll-margin-top: 80px;
-}
-
-.project-image {
-    position: relative;
-    z-index: 1;
-}
-
-.underline {
-    border-bottom: 2px solid rgb(216, 180, 254);
-} */

@@ -64,25 +64,19 @@ export default function About() {
             ref={ref}
         >
             <FontAwesomeIcon className="text-purple-400 text-4xl" icon={faAddressCard} />
-            <h1 className="text-3xl font-semibold mb-8">About Me</h1>
+            <h1 className="text-gray-100 text-3xl font-semibold mb-8">About Me</h1>
             <p className="mb-3">
-                I am a third year pursuing a B.S. in Software Engineering and a Minor in Mathematics
-                at the <span>University of California, Irvine</span>. Midway through college, I had enrolled in a 
+                I am a third year pursuing a <span className="text-violet-400">B.S. in Software Engineering</span> and a <span className="text-violet-400">Minor in Mathematics</span>{" "}
+                at the <span className="text-blue-300 font-semibold italic">University of California, Irvine</span>. Midway through college, I had enrolled in a 
                 coding bootcamp to learn full-sack web development, further pushing my career and allowing me to grow
                 and enjoy software engineering even more. My favorite part of programming is the problem-solving aspect, and I love
                 being able to figure out solutions to problems.
             </p>
             <p>
                 When I'm not coding, I enjoy playing video games, playing guitar and piano, lifting weights, and going on
-                hikes. I mainly enjoy being able to practice and hone the skillsets that I already have, but I am always open to
+                hikes. I mainly enjoy being able to practice my current skillsets, but I am always open to
                 explore new hobbies and things to do.
             </p>
-
-            {/* <p>
-                Some relevant courses that I have taken include: Boolean Logic and Discrete Structures, Discrete Mathematics for Computer Science, Computational Linear Algebra, Calculus I and II, 
-                Programming with Software Libraries, Data Structure Implementation and Analysis, Design and Analysis of Algorithms, Computer Organization, Principles of Operating Systems, Software Analysis and Design, 
-                Data Management, Project Management, and Product Management. 
-            </p> */}
         </motion.section>
     );
 }
