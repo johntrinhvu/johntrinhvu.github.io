@@ -32,7 +32,7 @@ export default function Header() {
                                 animate={{ y: 0, opacity: 1 }}
                             >
                                     <a 
-                                        className={clsx("text-gray-500 flex w-full items-center justify-center px-3 py-3 hover:text-gray-300 transition", {
+                                        className={clsx("flex w-full items-center justify-center px-3 py-3 hover:text-gray-300 transition", {
                                             "text-gray-200" : activeSection === link.name,
                                         })} 
                                         href={link.hash}
