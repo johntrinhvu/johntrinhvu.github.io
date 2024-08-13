@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.760295b7.css",
-    "main.js": "/static/js/main.d54f34ec.js",
+    "main.css": "/static/css/main.5a4612e3.css",
+    "main.js": "/static/js/main.9277a1f0.js",
     "static/media/FitnessTracker.png": "/static/media/FitnessTracker.7bd853daa29dd2ae81c2.png",
     "static/media/LegendsLounge.png": "/static/media/LegendsLounge.0dbc7fcb05f56b97c861.png",
     "static/media/Headshot.png": "/static/media/Headshot.1ba9372801eae05b9a73.png",
@@ -13,11 +13,11 @@
     "static/media/veefriends.png": "/static/media/veefriends.e4f0d133e5b485b9d776.png",
     "static/media/UCIOIT.jpeg": "/static/media/UCIOIT.234d58e1c7614bc99894.jpeg",
     "index.html": "/index.html",
-    "main.760295b7.css.map": "/static/css/main.760295b7.css.map",
-    "main.d54f34ec.js.map": "/static/js/main.d54f34ec.js.map"
+    "main.5a4612e3.css.map": "/static/css/main.5a4612e3.css.map",
+    "main.9277a1f0.js.map": "/static/js/main.9277a1f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.760295b7.css",
-    "static/js/main.d54f34ec.js"
+    "static/css/main.5a4612e3.css",
+    "static/js/main.9277a1f0.js"
   ]
 }
