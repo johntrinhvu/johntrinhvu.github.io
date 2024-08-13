@@ -10,10 +10,10 @@ The website has been designed to reflect my journey in software engineering and 
 
 The website is built using a combination of technologies that are suited for modern web development:
 
-- **React.js**: 
-- **TypeScript**: 
-- **JavaScript**: 
-- **Tailwind CSS**: 
+- **React.js** 
+- **TypeScript** 
+- **JavaScript** 
+- **Tailwind CSS** 
   
 ## Redesigns
 
