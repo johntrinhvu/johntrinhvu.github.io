@@ -101,7 +101,7 @@ export const projects = [
         title: "Fitness Tracker",
         subtitle: "Fitness Tracking Application",
         description: "Allows users to create and manage fitness routines. Users can add exercises to their routines, specifying the exercise name/number of sets and repetitions.",
-        tags: ["HTML", "CSS", "Mongo DB", "Express.JS", "Node.js", "JavaScript"],
+        tags: ["JavaScript", "Mongo DB", "Express.JS", "Node.js"],
         imageUrl: fitnessImg,
         link: "https://github.com/johntrinhvu/fitness-tracker",
     },

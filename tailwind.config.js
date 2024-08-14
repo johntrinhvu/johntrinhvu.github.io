@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        ubuntu: ["ubuntu", "sans-serif"]
+      }
+    },
   },
   plugins: [],
 }
