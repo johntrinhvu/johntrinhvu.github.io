@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.ef4b8fca.css",
-    "main.js": "/static/js/main.95f47af7.js",
-    "static/media/FitnessTracker.png": "/static/media/FitnessTracker.7bd853daa29dd2ae81c2.png",
-    "static/media/LegendsLounge.png": "/static/media/LegendsLounge.0dbc7fcb05f56b97c861.png",
+    "main.css": "/static/css/main.198ce62e.css",
+    "main.js": "/static/js/main.a9efe584.js",
     "static/media/Headshot.png": "/static/media/Headshot.1ba9372801eae05b9a73.png",
-    "static/media/NightOwl.png": "/static/media/NightOwl.f6e6cbb787f577abd462.png",
+    "static/media/FitnessTrackerNew.png": "/static/media/FitnessTrackerNew.6d25b7ef3161c06f4eb4.png",
+    "static/media/VeeFriendsWebPage.png": "/static/media/VeeFriendsWebPage.f408a9a97450c4bf1132.png",
+    "static/media/LegendsPage.png": "/static/media/LegendsPage.1c1ca778ae63dd51ff82.png",
+    "static/media/NightOwlNew.png": "/static/media/NightOwlNew.37438337841b245c7428.png",
     "static/media/Checkers.png": "/static/media/Checkers.f8e1877284eb84681e1e.png",
-    "static/media/Cardify.png": "/static/media/Cardify.dd73910228467367abac.png",
+    "static/media/logo.png": "/static/media/logo.7171607eb963d6f05992.png",
     "static/media/landandritual.png": "/static/media/landandritual.e6dd0fdaa063d3787a2d.png",
     "static/media/mingley.png": "/static/media/mingley.e0ff392c3c7a0f0ee7b3.png",
+    "static/media/CardifyBetter.png": "/static/media/CardifyBetter.a120eb3c5e2bce97581c.png",
     "static/media/veefriends.png": "/static/media/veefriends.e4f0d133e5b485b9d776.png",
     "static/media/UCIOIT.jpeg": "/static/media/UCIOIT.234d58e1c7614bc99894.jpeg",
     "index.html": "/index.html",
-    "main.ef4b8fca.css.map": "/static/css/main.ef4b8fca.css.map",
-    "main.95f47af7.js.map": "/static/js/main.95f47af7.js.map"
+    "main.198ce62e.css.map": "/static/css/main.198ce62e.css.map",
+    "main.a9efe584.js.map": "/static/js/main.a9efe584.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef4b8fca.css",
-    "static/js/main.95f47af7.js"
+    "static/css/main.198ce62e.css",
+    "static/js/main.a9efe584.js"
   ]
 }
