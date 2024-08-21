@@ -49,6 +49,7 @@ export const skills = [
     "React.js",
     "Node.js",
     "Express.js",
+    "Blazor WASM",
     "Web3",
     "NoSQL",
     "MySQL",
@@ -70,7 +71,7 @@ export const skills = [
     "R",
     "MongoDB",
     "Django",
-    "jQuery"
+    "jQuery",
 ] as const;
 
 export const projects = [

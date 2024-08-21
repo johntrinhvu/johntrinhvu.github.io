@@ -76,7 +76,7 @@ export default function Header() {
                             initial="initial"
                             animate="animate"
                             exit="exit"
-                            className="origin-top fixed left-0 top-16 w-full h-screen sm:hidden bg-gray-950 text-gray-300 pb-16"
+                            className="origin-top fixed left-0 top-16 w-full h-screen sm:hidden bg-gray-950 bg-opacity-80 text-gray-300 pb-20 backdrop-blur-[0.5rem]"
                         >
                             <motion.div 
                                 variants={containerVars}
@@ -93,7 +93,7 @@ export default function Header() {
                                                     variants={mobileLinkVars} 
                                                 >
                                                     <a
-                                                        className={clsx("relative text-2xl flex flex-col w-full items-center justify-center px-6 py-4 hover:text-purple-200 transition", {
+                                                        className={clsx("relative text-2xl flex flex-col w-full items-center justify-center px-6 py-4 hover:text-purple-300 transition", {
                                                             "text-purple-400" : activeSection === link.name,
                                                         })} 
                                                         key={index}
@@ -116,8 +116,8 @@ export default function Header() {
                 }
             </AnimatePresence>
             <motion.div 
-                className="flex justify-between fixed top-0 left-1/2 h-[4.5rem] w-full border border-black/40 sm:border-opacity-75 
-                                    bg-gray-950 sm:bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]
+                className="flex justify-between fixed top-0 left-1/2 h-[4.5rem] w-full sm:border sm:border-black/40 sm:border-opacity-75 
+                                    bg-gray-950 bg-opacity-80 sm:shadow-lg sm:shadow-black/[0.03] backdrop-blur-[0.5rem]
                                     sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full"
                 initial={{ y: -100, x: "-50%", opacity: 0 }}
                 animate={{ y: 0, x: "-50%", opacity: 1 }}
