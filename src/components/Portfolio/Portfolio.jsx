@@ -19,7 +19,7 @@ export default function Portfolio() {
                 <CodeIcon className="text-purple-400 w-12 h-12 flex-shrink-0" /> 
                 <h1 className="text-gray-100 text-3xl font-semibold mb-8">Portfolio</h1>
             </div>
-            <div className="">
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
                 {projects.map((project, index) => (
                     <React.Fragment
                         key={index}

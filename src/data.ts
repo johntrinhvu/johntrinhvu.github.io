@@ -1,8 +1,9 @@
-import cardifyImg from "./images/Cardify.png";
-import legendsImg from "./images/LegendsLounge.png";
+import veeFriendPage from "./images/VeeFriendsWebPage.png";
+import cardifyImg from "./images/CardifyBetter.png";
+import legendsImg from "./images/LegendsPage.png"
 import checkersImg from "./images/Checkers.png";
-import nightOwlImg from "./images/NightOwl.png";
-import fitnessImg from "./images/FitnessTracker.png";
+import nightOwlImg from "./images/NightOwlNew.png";
+import fitnessImg from "./images/FitnessTrackerNew.png";
 import uciOIT from "./images/UCIOIT.jpeg";
 import gaImg from "./images/GA.png";
 import ucieImg from "./images/UCIE.png";
@@ -73,6 +74,14 @@ export const skills = [
 ] as const;
 
 export const projects = [
+    {
+        title: "VeeFriends",
+        subtitle: "NFT Collectibles",
+        description: "A Gary Vaynerchuk NFT project around meaningful intellectual property and an extraordinary community.",
+        tags: ["C#", "Blazor WASM", "Tailwind", "Web3.js", "Nethereum"],
+        imageUrl: veeFriendPage,
+        link: "https://www.veefriends.com/"
+    },
     {
         title: "Cardify",
         subtitle: "Virtual Business Card Creator",
