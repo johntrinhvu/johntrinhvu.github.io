@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import Headshot from "../../images/Headshot.png";
+// import Headshot from "../../images/Headshot.png";
+import profilePicture from "../../images/profilePicture.png";
 import { useSectionInView } from "../../hooks.tsx";
 import { useActiveSectionContext } from "../../context/ActiveSectionContext/ActiveSectionContext.tsx";
 
@@ -22,8 +23,8 @@ export default function Intro() {
                         transition={{ type: "tween", duration: 0.2 }}
                     >
                         <img 
-                            className="object-cover object-center rounded-full h-24 w-24 border-[0.10rem] border-white object-cover shadow-xl"
-                            src={Headshot}
+                            className="object-cover object-center rounded-full h-32 w-32 border-[0.10rem] border-white object-cover shadow-xl"
+                            src={profilePicture}
                             alt="John Vu Headshot"
                             width="192"
                             height="192"
