@@ -80,7 +80,7 @@ export const projects = [
         title: "RideHub",
         subtitle: "Taxi Comparison Mobile App",
         description: "Designed to make smarter, cost-effective travel choices by comparing Uber and Lyft prices. Determine the best option for your journey all in one place.",
-        tags: ["React Native", "Ruby", "Kotlin", "Swift", "Tailwind CSS"],
+        tags: ["React Native", "Ruby", "Kotlin", "Swift", "Tailwind"],
         imageUrl: ridehubImg,
         link: "https://github.com/johntrinhvu/RideHub"
     },
@@ -88,7 +88,7 @@ export const projects = [
         title: "VeeFriends",
         subtitle: "NFT Collectibles",
         description: "A Gary Vaynerchuk NFT project around meaningful intellectual property and an extraordinary community.",
-        tags: ["C#", "Blazor WASM", "Tailwind", "Web3.js", "Nethereum"],
+        tags: ["C#", ".NET", "Blazor WASM", "Blockchain", "Web3.js", "Nethereum"],
         imageUrl: veeFriendPage,
         link: "https://www.veefriends.com/"
     },
@@ -137,7 +137,7 @@ export const projects = [
 export const jobs = [
     {
         title: "Software Engineer Intern",
-        date: "Jun 2024 - Current",
+        date: "Jun 2024 - Sept 2024",
         company: "Vee Friends, LLC",
         points: [
             "Redesigned and developed several front-end components of the company website, speeding up loading time and resulting in a 20% increase in ticket sales for VeeCon events, and up to a 50% proficiency increase in concierge meetings.",
@@ -148,7 +148,7 @@ export const jobs = [
     },
     {
         title: "Full-Stack Software Engineer",
-        date: "May 2024 - Current",
+        date: "May 2024 - Sept 2024",
         company: "Land and Ritual",
         points: [
             "Created a framework for a San Francisco-based skincare company, in collaboration with a team of 3 engineers, designing and implementing user friendly front-end interfaces and back-end APIs.",
@@ -207,7 +207,7 @@ export const jobs = [
     },
     {
         title: "League of Legends Esports Scholarship Player",
-        date: "Sep 2021 - Sep 2022",
+        date: "Sept 2021 - Sept 2022",
         company: "UCI Esports",
         points: [
             "Committed 15 hours per week to intensive scrimmages, refining gameplay mechanics, and strategizing with the team. Showcased strong leadership skills by organizing team events and fostering a positive team culture, even during challenging situations.",
