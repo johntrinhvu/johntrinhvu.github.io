@@ -1,3 +1,4 @@
+import ridehubImg from "./images/RideHub.png";
 import veeFriendPage from "./images/VeeFriendsWebPage.png";
 import cardifyImg from "./images/CardifyBetter.png";
 import legendsImg from "./images/LegendsPage.png"
@@ -75,6 +76,14 @@ export const skills = [
 ] as const;
 
 export const projects = [
+    {
+        title: "RideHub",
+        subtitle: "Taxi Comparison Mobile App",
+        description: "Designed to make smarter, cost-effective travel choices by comparing Uber and Lyft prices. Determine the best option for your journey all in one place.",
+        tags: ["React Native", "Ruby", "Kotlin", "Swift", "Tailwind CSS"],
+        imageUrl: ridehubImg,
+        link: "https://github.com/johntrinhvu/RideHub"
+    },
     {
         title: "VeeFriends",
         subtitle: "NFT Collectibles",
