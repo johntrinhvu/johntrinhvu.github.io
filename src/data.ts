@@ -11,6 +11,7 @@ import ucieImg from "./images/UCIE.png";
 import mingleyImg from "./images/mingley.png";
 import veeFriendLogo from "./images/veefriends.png";
 import landNRitualLogo from "./images/landandritual.png";
+import blockhouseLogo from "./images/blockhouse_capital_logo.jpeg";
 
 export const links = [
     {
@@ -137,6 +138,17 @@ export const projects = [
 export const jobs = [
     {
         title: "Software Engineer Intern",
+        date: "Sept 2024 - Current",
+        company: "Blockhouse",
+        points: [
+            "Implemented automation testing and unit testing on a Python-Django framework for various backend services, including API testing as well as Sign-in/Sign-up testing with 100% coverage rate.",
+            "Created a Python-based analysis tool for identifying cost-saving opportunities in stock trading by evaluating the largest net changes in holdings from 13-F filings, optimizing slippage, market impact, and bid-ask."
+        ],
+        icon: blockhouseLogo,
+        iconBg: "#fff",
+    },
+    {
+        title: "Software Engineer Intern",
         date: "Jun 2024 - Sept 2024",
         company: "Vee Friends, LLC",
         points: [
@@ -169,7 +181,7 @@ export const jobs = [
         iconBg: "#fff",
     },
     {
-        title: "Software Developer",
+        title: "Software Development Assistant",
         date: "Nov 2023 - Current",
         company: "UCI Office of Information Technology, GDIT & UGA",
         points: [
