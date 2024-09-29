@@ -145,7 +145,7 @@ export const jobs = [
             "Created a Python-based analysis tool for identifying cost-saving opportunities in stock trading by evaluating the largest net changes in holdings from 13-F filings, optimizing slippage, market impact, and bid-ask."
         ],
         icon: blockhouseLogo,
-        iconBg: "#fff",
+        iconBg: "#000",
     },
     {
         title: "Software Engineer Intern",
