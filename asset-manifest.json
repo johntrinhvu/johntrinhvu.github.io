@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ac62c66e.css",
-    "main.js": "/static/js/main.986c0b46.js",
+    "main.css": "/static/css/main.623e9b68.css",
+    "main.js": "/static/js/main.3f30680c.js",
     "static/media/FitnessTrackerNew.png": "/static/media/FitnessTrackerNew.6d25b7ef3161c06f4eb4.png",
     "static/media/VeeFriendsWebPage.png": "/static/media/VeeFriendsWebPage.f408a9a97450c4bf1132.png",
     "static/media/profilePicture.png": "/static/media/profilePicture.2a1b5eb8a3ebf9fa6613.png",
@@ -9,18 +9,17 @@
     "static/media/NightOwlNew.png": "/static/media/NightOwlNew.37438337841b245c7428.png",
     "static/media/Checkers.png": "/static/media/Checkers.f8e1877284eb84681e1e.png",
     "static/media/logo.png": "/static/media/logo.7171607eb963d6f05992.png",
-    "static/media/landandritual.png": "/static/media/landandritual.e6dd0fdaa063d3787a2d.png",
     "static/media/RideHub.png": "/static/media/RideHub.eddc9ff058cdd72ce4ae.png",
     "static/media/mingley.png": "/static/media/mingley.e0ff392c3c7a0f0ee7b3.png",
     "static/media/CardifyBetter.png": "/static/media/CardifyBetter.a120eb3c5e2bce97581c.png",
     "static/media/veefriends.png": "/static/media/veefriends.e4f0d133e5b485b9d776.png",
     "static/media/UCIOIT.jpeg": "/static/media/UCIOIT.234d58e1c7614bc99894.jpeg",
     "index.html": "/index.html",
-    "main.ac62c66e.css.map": "/static/css/main.ac62c66e.css.map",
-    "main.986c0b46.js.map": "/static/js/main.986c0b46.js.map"
+    "main.623e9b68.css.map": "/static/css/main.623e9b68.css.map",
+    "main.3f30680c.js.map": "/static/js/main.3f30680c.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac62c66e.css",
-    "static/js/main.986c0b46.js"
+    "static/css/main.623e9b68.css",
+    "static/js/main.3f30680c.js"
   ]
 }
