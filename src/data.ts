@@ -10,8 +10,8 @@ import gaImg from "./images/GA.png";
 import ucieImg from "./images/UCIE.png";
 import mingleyImg from "./images/mingley.png";
 import veeFriendLogo from "./images/veefriends.png";
-import landNRitualLogo from "./images/landandritual.png";
 import blockhouseLogo from "./images/blockhouse_capital_logo.jpeg";
+import bliLogo from "./images/bliIcon.png";
 
 export const links = [
     {
@@ -137,8 +137,18 @@ export const projects = [
 
 export const jobs = [
     {
+        title: "AI & Machine Learning Researcher",
+        date: "Oct 2024 - Current",
+        company: "Beckman Laser Institute",
+        points: [
+            "Just started this position, will update in the future."
+        ],
+        icon: bliLogo,
+        iconBg: "#335694"
+    },
+    {
         title: "Software Engineer Intern",
-        date: "Sept 2024 - Current",
+        date: "Sept 2024 - Oct 2024",
         company: "Blockhouse",
         points: [
             "Implemented automation testing and unit testing on a Python-Django framework for various backend services, including API testing as well as Sign-in/Sign-up testing with 100% coverage rate.",
@@ -156,17 +166,6 @@ export const jobs = [
             "Partnered with the back-end lead to gain helpful insights into the back-end processes at Vee Friends, to better understand the integration process and functionality of front-end components with back-end systems."
         ],
         icon: veeFriendLogo,
-        iconBg: "#fff",
-    },
-    {
-        title: "Full-Stack Software Engineer",
-        date: "May 2024 - Sept 2024",
-        company: "Land and Ritual",
-        points: [
-            "Created a framework for a San Francisco-based skincare company, in collaboration with a team of 3 engineers, designing and implementing user friendly front-end interfaces and back-end APIs.",
-            "Managed both version control and code quality as Git manager, ensuring and maintaining high standards of code following an MVC framework, as well as following the SDLC."
-        ],
-        icon: landNRitualLogo,
         iconBg: "#fff",
     },
     {
