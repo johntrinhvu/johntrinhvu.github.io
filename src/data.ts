@@ -1,3 +1,4 @@
+import bucketlistImg from "./images/BucketList.png";
 import ridehubImg from "./images/RideHub.png";
 import veeFriendPage from "./images/VeeFriendsWebPage.png";
 import cardifyImg from "./images/CardifyBetter.png";
@@ -77,6 +78,14 @@ export const skills = [
 ] as const;
 
 export const projects = [
+    {
+        title: "BucketList AI",
+        subtitle: "Flight finder based on personal preference",
+        description: "Never miss out on the perfect flight for your dream trip. Build bucketlists and receive automatic notifications about the most affordable flights.",
+        tags: ["FastAPI", "React", "MongoDB", "Fetch.AI", "OpenAI"],
+        imageUrl: bucketlistImg,
+        link: "https://github.com/johntrinhvu/BucketList-AI"
+    },
     {
         title: "RideHub",
         subtitle: "Taxi Comparison Mobile App",
