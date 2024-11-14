@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.623e9b68.css",
-    "main.js": "/static/js/main.386e7912.js",
+    "main.css": "/static/css/main.8066cf04.css",
+    "main.js": "/static/js/main.78e36dde.js",
     "static/media/FitnessTrackerNew.png": "/static/media/FitnessTrackerNew.6d25b7ef3161c06f4eb4.png",
     "static/media/VeeFriendsWebPage.png": "/static/media/VeeFriendsWebPage.f408a9a97450c4bf1132.png",
     "static/media/BucketList.png": "/static/media/BucketList.3e790be0c1fb5662980a.png",
@@ -13,14 +13,15 @@
     "static/media/RideHub.png": "/static/media/RideHub.eddc9ff058cdd72ce4ae.png",
     "static/media/mingley.png": "/static/media/mingley.e0ff392c3c7a0f0ee7b3.png",
     "static/media/CardifyBetter.png": "/static/media/CardifyBetter.a120eb3c5e2bce97581c.png",
+    "static/media/metaLogo.png": "/static/media/metaLogo.9a841f3a45a3db62c3e6.png",
     "static/media/veefriends.png": "/static/media/veefriends.e4f0d133e5b485b9d776.png",
     "static/media/UCIOIT.jpeg": "/static/media/UCIOIT.234d58e1c7614bc99894.jpeg",
     "index.html": "/index.html",
-    "main.623e9b68.css.map": "/static/css/main.623e9b68.css.map",
-    "main.386e7912.js.map": "/static/js/main.386e7912.js.map"
+    "main.8066cf04.css.map": "/static/css/main.8066cf04.css.map",
+    "main.78e36dde.js.map": "/static/js/main.78e36dde.js.map"
   },
   "entrypoints": [
-    "static/css/main.623e9b68.css",
-    "static/js/main.386e7912.js"
+    "static/css/main.8066cf04.css",
+    "static/js/main.78e36dde.js"
   ]
 }
