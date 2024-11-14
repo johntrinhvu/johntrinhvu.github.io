@@ -20,11 +20,8 @@ export default function About() {
             <h1 className="text-gray-100 text-3xl font-semibold mb-8">About Me</h1>
             <div className="bg-gray-800 w-full p-4 rounded-xl border-gray-700 border-2">
                 <p className="mb-3">
-                    I am a third year pursuing a <span className="text-violet-400">B.S. in Software Engineering</span> and a <span className="text-violet-400">Minor in Mathematics</span>{" "}
-                    at the <span className="text-blue-300 font-semibold italic">University of California, Irvine</span>. Midway through college, I had enrolled in a 
-                    coding bootcamp to learn full-stack web development, further pushing my career and allowing me to grow
-                    and enjoy software engineering even more. My favorite part of programming is the <span className="text-violet-400">problem-solving aspect</span>, and I love
-                    being able to figure out solutions to problems.
+                    I am a third year <span className="text-violet-400">Software Engineering</span> major pursuing a <span className="text-violet-400">Mathematics</span> minor {" "}
+                    at the <span className="text-blue-300 font-semibold">University of California, Irvine</span>. I will be joining <span className="text-blue-300 font-bold">Meta</span> as a Software Engineering Intern this summer.
                 </p>
                 <p>
                     When I'm not coding, I enjoy playing guitar, lifting weights, going on

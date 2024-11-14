@@ -13,6 +13,7 @@ import mingleyImg from "./images/mingley.png";
 import veeFriendLogo from "./images/veefriends.png";
 import blockhouseLogo from "./images/blockhouse_capital_logo.jpeg";
 import bliLogo from "./images/bliIcon.png";
+import metaLogo from "./images/metaLogo.png";
 
 export const links = [
     {
@@ -146,6 +147,16 @@ export const projects = [
 
 export const jobs = [
     {
+        title: "Software Engineer Intern",
+        date: "Jun 2025 - Sept 2025",
+        company: "Meta",
+        points: [
+            "Incoming Software Engineer",
+        ],
+        icon: metaLogo,
+        iconBg: "#fff",
+    },
+    {
         title: "AI & Machine Learning Researcher",
         date: "Oct 2024 - Current",
         company: "Beckman Laser Institute",
@@ -179,7 +190,7 @@ export const jobs = [
     },
     {
         title: "Front-End Software Engineer",
-        date: "Apr 2024 - Current",
+        date: "Apr 2024 - Sept 2024",
         company: "Mingley",
         points: [
             "Engineered and deployed a mobile iOS login and registration page from scratch single-handedly within a team of 8.",
