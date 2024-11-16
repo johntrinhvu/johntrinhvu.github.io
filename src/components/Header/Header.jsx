@@ -122,11 +122,7 @@ export default function Header() {
                 initial={{ y: -100, x: "-50%", opacity: 0 }}
                 animate={{ y: 0, x: "-50%", opacity: 1 }}
             >
-                <img 
-                    src={anteater} 
-                    alt="logo" 
-                    className="sm:hidden pl-4 pb-4"
-                />
+                <h1 className="sm:hidden text-2xl pl-5 pt-5 text-white">John Trinh Vu</h1>
                 <button className="sm:hidden pr-6" onClick={toggleMenu}>
                     <FontAwesomeIcon
                         className={clsx("w-6 h-6 transition", {
@@ -138,7 +134,6 @@ export default function Header() {
                 </button>
             </motion.div>
             <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-                <h1 className="sm:hidden text-2xl p-2 text-white">John Trinh Vu</h1>
                 <ul 
                     className="hidden sm:flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500
                                         sm:w-[initial] sm:flex-nowrap sm:gap-5"
