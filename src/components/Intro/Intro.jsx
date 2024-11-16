@@ -67,7 +67,7 @@ export default function Intro() {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    download resume{" "}
+                    download cv{" "}
                     <FontAwesomeIcon className="opacity-70 group-hover:translate-y-1 transition" icon={faDownload} />
                 </a>
 
