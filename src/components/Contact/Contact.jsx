@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "../../hooks.tsx";
 
 export default function Contact() {
-    const { ref } = useSectionInView("Contact", 0.25);
+    const { ref } = useSectionInView("contact", 0.25);
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -84,7 +84,7 @@ export default function Contact() {
                   onSubmit={sendEmail}
                   className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
                     <h2 className="sm:text-4xl text-3xl mb-1 font-semibold title-font text-gray-100">
-                        Contact Me
+                        contact me
                     </h2>
                     <p className="leading-relaxed mb-5">
                     If you have any questions, I'd love to hear from you.
@@ -93,7 +93,7 @@ export default function Contact() {
                     </p>
                     <div className="relative mb-4">
                         <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-                            Name
+                            name
                         </label>
                         <input
                           type="text"
@@ -105,7 +105,7 @@ export default function Contact() {
                     </div>
                     <div className="relative mb-4">
                         <label htmlFor="email" className="leading-7 text-sm text-gray-400">
-                            Email
+                            email
                         </label>
                         <input
                           type="email"
@@ -117,7 +117,7 @@ export default function Contact() {
                     </div>
                     <div className="relative mb-4">
                         <label htmlFor="phone" className="leading-7 text-sm text-gray-400">
-                            Phone
+                            phone
                         </label>
                         <input
                           type="text"
@@ -129,7 +129,7 @@ export default function Contact() {
                     </div>
                     <div className="relative mb-4">
                         <label htmlFor="message" className="leading-7 text-sm text-gray-400">
-                            Message
+                            message
                         </label>
                         <textarea
                           id="message"
@@ -139,7 +139,7 @@ export default function Contact() {
                         />
                     </div>
                     <button type="submit" value="Send" className="text-purple-100 bg-purple-700 border-0 py-2 px-6 focus:outline-none hover:bg-purple-900 rounded text-lg hover:text-white transition ease-in duration-100">
-                        Submit
+                        submit
                     </button>
                 </form>
             </div>

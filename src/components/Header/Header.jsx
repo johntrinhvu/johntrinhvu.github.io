@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { links } from "../../data.ts";
 import clsx from "clsx";
-import anteater from "../../images/logo.png";
 import { useActiveSectionContext } from "../../context/ActiveSectionContext/ActiveSectionContext.tsx";
 
 
@@ -122,7 +121,7 @@ export default function Header() {
                 initial={{ y: -100, x: "-50%", opacity: 0 }}
                 animate={{ y: 0, x: "-50%", opacity: 1 }}
             >
-                <h1 className="sm:hidden text-2xl pl-5 pt-5 text-white">John Trinh Vu</h1>
+                <h1 className="sm:hidden text-2xl pl-5 pt-5 text-white">john trinh vu</h1>
                 <button className="sm:hidden pr-6" onClick={toggleMenu}>
                     <FontAwesomeIcon
                         className={clsx("w-6 h-6 transition", {

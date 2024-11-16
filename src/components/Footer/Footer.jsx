@@ -8,13 +8,13 @@ export default function Footer() {
             <div className="mx-auto flex justify-between items-center">
                 {/* Left Section */}
                 <div>
-                    <h1 className="font-semibold text-purple-400">Developed and Designed</h1>
-                    <p className="text-sm text-left text-gray-400">by John Vu</p>
+                    <h1 className="font-semibold text-purple-400">developed and designed</h1>
+                    <p className="text-sm text-left text-gray-400">by john vu</p>
                 </div>
 
                 {/* Right Section */}
                 <div>
-                    <h1 className="font-bold text-left text-purple-400">Socials</h1>
+                    <h1 className="font-bold text-left text-purple-400">socials</h1>
                     <div className="flex justify-end">
                         <a href="https://www.linkedin.com/in/johntrinhvu/" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon className="hover:text-white w-6 h-6 text-gray-300 transition" icon={faLinkedin} />

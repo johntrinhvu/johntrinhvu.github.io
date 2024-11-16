@@ -17,27 +17,27 @@ import metaLogo from "./images/metaLogo.png";
 
 export const links = [
     {
-        name: "Home",
+        name: "home",
         hash: "#home",
     },
     {
-        name: "About",
+        name: "about",
         hash: "#about",
     },
     {
-        name: "Skills",
+        name: "skills",
         hash: "#skills",
     },
     {
-        name: "Portfolio",
+        name: "portfolio",
         hash: "#portfolio",
     },
     {
-        name: "Experience",
+        name: "experience",
         hash: "#experience",
     },
     {
-        name: "Contact",
+        name: "contact",
         hash: "#contact",
     }
 ] as const;
@@ -61,8 +61,8 @@ export const skills = [
     "SQLite3",
     "PostgreSQL",
     ".NET",
-    "AI Artificial Intelligence",
-    "ML Machine Learning",
+    "Artificial Intelligence",
+    "Machine Learning",
     "MIPS Assembly",
     "Azure",
     "Perl",

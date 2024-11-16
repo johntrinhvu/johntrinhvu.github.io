@@ -6,7 +6,7 @@ import { jobs } from "../../data.ts";
 import { useSectionInView } from "../../hooks.tsx";
 
 export default function Experience() {
-    const { ref } = useSectionInView("Experience", 0.15);
+    const { ref } = useSectionInView("experience", 0.15);
 
     return (
         <section
@@ -16,7 +16,7 @@ export default function Experience() {
         >
             <div className="text-center">
                 <NewspaperIcon className="w-12 inline-block mb-4 text-purple-400" /> 
-                <h1 className="text-gray-100 text-3xl font-semibold mb-8 ml-auto mr-auto">Experience</h1>
+                <h1 className="text-gray-100 text-3xl font-semibold mb-8 ml-auto mr-auto">experience</h1>
                 <div className="bg-gray-800 rounded-xl border-2 border-gray-700 p-4 mb-3 mx-auto max-w-md sm:max-w-xl md:max-w-2xl">
                     <h3 className="text-gray-200 text-base font-semibold ml-auto mr-auto max-w-4xl">
                         Alongside my current experience, some relevant courses that I have taken in university include but not all:

@@ -3,13 +3,12 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-// import Headshot from "../../images/Headshot.png";
 import profilePicture from "../../images/profilePicture.png";
 import { useSectionInView } from "../../hooks.tsx";
 import { useActiveSectionContext } from "../../context/ActiveSectionContext/ActiveSectionContext.tsx";
 
 export default function Intro() {
-    const { ref } = useSectionInView("Home", 0.95);
+    const { ref } = useSectionInView("home", 0.95);
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
     return (
@@ -40,8 +39,8 @@ export default function Intro() {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                Hello, I'm <span className="font-bold text-fuchsia-800">John Trinh Vu.</span> I'm a{" "}
-                <span className="font-bold">Full Stack Software Developer</span>.
+                hi, i'm <span className="font-bold text-fuchsia-800">john trinh vu.</span> i'm a{" "}
+                <span className="">full stack software developer</span>.
             </motion.h1>
 
             <motion.div
@@ -58,7 +57,7 @@ export default function Intro() {
                         setTimeOfLastClick(Date.now());
                     }}
                 >
-                    Contact me here{" "}
+                    contact me{" "}
                     <FontAwesomeIcon className="opacity-70 group-hover:translate-x-1 transition" icon={faArrowRight} />
                 </a>
 
@@ -68,7 +67,7 @@ export default function Intro() {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    Download Resume{" "}
+                    download resume{" "}
                     <FontAwesomeIcon className="opacity-70 group-hover:translate-y-1 transition" icon={faDownload} />
                 </a>
 

@@ -21,7 +21,7 @@ const fadeInAnimationVariants = {
 };
 
 export default function Skills() {
-    const { ref } = useSectionInView("Skills", 0.3);
+    const { ref } = useSectionInView("skills", 0.3);
 
     return (
         <motion.section
@@ -33,7 +33,7 @@ export default function Skills() {
             transition={{ delay: 0.175 }}
         >
             <ChipIcon className="w-12 inline-block mb-4 text-purple-400" /> 
-            <h1 className="text-gray-100 text-3xl font-semibold mb-8">Skills and Technologies</h1>
+            <h1 className="text-gray-100 text-3xl font-semibold mb-8">skills and technologies</h1>
             <ul className="flex flex-wrap justify-center gap-2 text-lg">
                 {skills.map((skill, index) => (
                     <motion.li

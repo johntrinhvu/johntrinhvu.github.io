@@ -7,7 +7,7 @@ import Project from "../Project/Project";
 import { useSectionInView } from "../../hooks.tsx";
 
 export default function Portfolio() {
-    const { ref } = useSectionInView("Portfolio", 0.35);
+    const { ref } = useSectionInView("portfolio", 0.35);
 
     return (
         <section
@@ -17,7 +17,7 @@ export default function Portfolio() {
         >
             <div className="text-center flex flex-col items-center justify-center">
                 <CodeIcon className="text-purple-400 w-12 h-12 flex-shrink-0" /> 
-                <h1 className="text-gray-100 text-3xl font-semibold mb-8">Portfolio</h1>
+                <h1 className="text-gray-100 text-3xl font-semibold mb-8">portfolio</h1>
             </div>
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
                 {projects.map((project, index) => (
