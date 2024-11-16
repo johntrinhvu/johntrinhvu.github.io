@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8066cf04.css",
-    "main.js": "/static/js/main.78e36dde.js",
+    "main.css": "/static/css/main.f8c14c3e.css",
+    "main.js": "/static/js/main.4150e418.js",
     "static/media/FitnessTrackerNew.png": "/static/media/FitnessTrackerNew.6d25b7ef3161c06f4eb4.png",
     "static/media/VeeFriendsWebPage.png": "/static/media/VeeFriendsWebPage.f408a9a97450c4bf1132.png",
     "static/media/BucketList.png": "/static/media/BucketList.3e790be0c1fb5662980a.png",
@@ -17,11 +17,11 @@
     "static/media/veefriends.png": "/static/media/veefriends.e4f0d133e5b485b9d776.png",
     "static/media/UCIOIT.jpeg": "/static/media/UCIOIT.234d58e1c7614bc99894.jpeg",
     "index.html": "/index.html",
-    "main.8066cf04.css.map": "/static/css/main.8066cf04.css.map",
-    "main.78e36dde.js.map": "/static/js/main.78e36dde.js.map"
+    "main.f8c14c3e.css.map": "/static/css/main.f8c14c3e.css.map",
+    "main.4150e418.js.map": "/static/js/main.4150e418.js.map"
   },
   "entrypoints": [
-    "static/css/main.8066cf04.css",
-    "static/js/main.78e36dde.js"
+    "static/css/main.f8c14c3e.css",
+    "static/js/main.4150e418.js"
   ]
 }
