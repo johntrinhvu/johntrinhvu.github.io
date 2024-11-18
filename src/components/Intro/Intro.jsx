@@ -39,8 +39,8 @@ export default function Intro() {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                hi, i'm <span className="font-bold text-fuchsia-800">john trinh vu.</span> i'm a{" "}
-                <span className="">full stack software developer</span>.
+                Hi, I'm <span className="font-bold text-fuchsia-800">John Trinh Vu</span>. I'm a{" "}
+                <span className="">Full Stack Software Developer</span>.
             </motion.h1>
 
             <motion.div
@@ -57,7 +57,7 @@ export default function Intro() {
                         setTimeOfLastClick(Date.now());
                     }}
                 >
-                    contact me{" "}
+                    Contact Me{" "}
                     <FontAwesomeIcon className="opacity-70 group-hover:translate-x-1 transition" icon={faArrowRight} />
                 </a>
 
@@ -67,7 +67,7 @@ export default function Intro() {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    download cv{" "}
+                    Download CV{" "}
                     <FontAwesomeIcon className="opacity-70 group-hover:translate-y-1 transition" icon={faDownload} />
                 </a>
 

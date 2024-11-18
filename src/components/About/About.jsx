@@ -17,7 +17,7 @@ export default function About() {
             ref={ref}
         >
             <FontAwesomeIcon className="text-purple-400 text-4xl" icon={faAddressCard} />
-            <h1 className="text-gray-100 text-3xl font-semibold mb-8">about me</h1>
+            <h1 className="text-gray-100 text-3xl font-semibold mb-8">About Me</h1>
             <div className="bg-gray-800 w-full p-4 rounded-xl border-gray-700 border-2">
                 <p className="mb-3">
                     I am a third year <span className="text-violet-400">B.S. Software Engineering</span> major pursuing a <span className="text-violet-400">Mathematics</span> minor {" "}
