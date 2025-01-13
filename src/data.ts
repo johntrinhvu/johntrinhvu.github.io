@@ -161,7 +161,8 @@ export const jobs = [
         date: "Oct 2024 - Current",
         company: "Beckman Laser Institute",
         points: [
-            "Just started this position, will update in the future."
+            "Implemented U-Net Architecture in PyTorch and TensorFlow to enhance OCT images of the cornea by reducing noise and isolating subcutaneous layers.",
+            "Trained machine learning models on large OCT datasets to reconstruct the ideal spherical shape of the cornea, achieving high fidelity with reference ball models."
         ],
         icon: bliLogo,
         iconBg: "#335694"
