@@ -161,8 +161,8 @@ export const jobs = [
         date: "Oct 2024 - Current",
         company: "Beckman Laser Institute",
         points: [
-            "Implemented U-Net Architecture in PyTorch and TensorFlow to enhance OCT images of the cornea by reducing noise and isolating subcutaneous layers.",
-            "Trained machine learning models on large OCT datasets to reconstruct the ideal spherical shape of the cornea, achieving high fidelity with reference ball models."
+            "Developed and trained a custom U-Net Model in TensorFlow to enhance OCT images, achieving a 99.45% accuracy in noise reduction and corneal layer segmentation.",
+            "Optimized model performance using advanced loss functions (weighted binary cross-entropy and dice loss), as well as gradient accumulation strategies to handle low-memory constraints, reducing memory usage by ~25%."
         ],
         icon: bliLogo,
         iconBg: "#335694"
@@ -190,17 +190,6 @@ export const jobs = [
         iconBg: "#fff",
     },
     {
-        title: "Front-End Software Engineer",
-        date: "Apr 2024 - Sept 2024",
-        company: "Mingley",
-        points: [
-            "Engineered and deployed a mobile iOS login and registration page from scratch single-handedly within a team of 8.",
-            "Led a team of 3 engineers, consisting of 1 front-end and 1 UI/UX engineer, to build the company's user interface."
-        ],
-        icon: mingleyImg,
-        iconBg: "#fff",
-    },
-    {
         title: "Software Development Assistant",
         date: "Nov 2023 - Current",
         company: "UCI Office of Information Technology, GDIT & UGA",
@@ -212,7 +201,7 @@ export const jobs = [
         iconBg: "#fff",
     },
     {
-        title: "Software Engineer Fellow",
+        title: "Software Engineer Resident",
         date: "Apr 2023 - Jul 2023",
         company: "General Assembly",
         points: [
