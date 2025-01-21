@@ -201,7 +201,7 @@ export const jobs = [
         iconBg: "#fff",
     },
     {
-        title: "Software Engineer Resident",
+        title: "Software Engineer Apprentice",
         date: "Apr 2023 - Jul 2023",
         company: "General Assembly",
         points: [
