@@ -24,7 +24,7 @@ export default function Experience() {
                     <p className="text-gray-200 mt-3 mb-3 pl-0 ml-auto mr-auto max-w-4xl">
                         <span className="font-semibold text-violet-400 italic">Computational Linear Algebra</span>, Boolean Logic and Discrete Structures, Discrete Mathematics for Computer Science, Calculus I and II, 
                         Programming with Software Libraries, <span className="font-semibold text-violet-400 italic">Data Structure Implementation and Analysis</span>, Computer Organization,{" "} 
-                        <span className="font-semibold text-violet-400 italic">Design and Analysis of Algorithms</span>, Principles of Operating Systems, Software Analysis and Design, Data Management, Project Management, and Product Management. 
+                        <span className="font-semibold text-violet-400 italic">Design and Analysis of Algorithms</span>, Principles of Operating Systems, Software Analysis and Design, Data Management, and Project Management. 
                     </p>
                 </div>
             </div>

@@ -50,7 +50,7 @@ export default function Contact() {
                       marginheight={0}
                       marginwidth={0}
                       style={{ filter: "opacity(0.86)" }}
-                      src="https://www.google.com/maps/embed/v1/place?q=UCI,+Irvine,+CA,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.509042242935!2d-117.85485014764406!3d33.643969770591546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcde16c3d59287%3A0xdb53ff937cae674a!2s1002%20Health%20Sciences%20Rd%2C%20Irvine%2C%20CA%2092617!5e0!3m2!1sen!2sus!4v1737420377848!5m2!1sen!2sus" 
                     />
                     <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
                         <div className="lg:w-1/2 px-6">
@@ -58,8 +58,8 @@ export default function Contact() {
                                 ADDRESS
                             </h2>
                             <p className="mt-1">
-                                University of California, Irvine <br />
-                                Irvine, CA 92697
+                                UCI - Beckman Laser Institute <br />
+                                Irvine, CA 92612
                             </p>
                         </div>
                         <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">

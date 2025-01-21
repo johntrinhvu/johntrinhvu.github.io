@@ -1,3 +1,4 @@
+import octImg from "./images/OCTImg.png";
 import bucketlistImg from "./images/BucketList.png";
 import ridehubImg from "./images/RideHub.png";
 import veeFriendPage from "./images/VeeFriendsWebPage.png";
@@ -46,39 +47,36 @@ export const skills = [
     "C++",
     "Python",
     "Java",
-    "C",
     "C#",
     "JavaScript",
     "TypeScript",
     "React.js",
     "Node.js",
     "Express.js",
+    "C",
     "Blazor WASM",
     "Web3",
-    "NoSQL",
-    "MySQL",
     "SQL",
-    "SQLite3",
-    "PostgreSQL",
     ".NET",
     "Artificial Intelligence",
     "Machine Learning",
+    "PyTorch",
+    "TensorFlow",
     "MIPS Assembly",
-    "Azure",
-    "Perl",
     "Swift",
-    "Golang",
-    "Rust",
     "Kotlin",
     "Lua",
-    "Ruby",
-    "R",
-    "MongoDB",
-    "Django",
-    "jQuery",
 ] as const;
 
 export const projects = [
+    {
+        title: "OCT Noise Cancellation",
+        subtitle: "Removes the unnecessary noise from images of the cornea",
+        description: "Input a folder of OCT images and output a folder of cleaned, noiseless images of the eye using machine learning algorithms.",
+        tags: ["Python", "TensorFlow", "OpenCV", "NumPy", "Keras"],
+        imageUrl: octImg,
+        link: "https://github.com/johntrinhvu/OCT-Noise-Cancellation"
+    },
     {
         title: "BucketList AI",
         subtitle: "Flight finder based on personal preference",
@@ -135,14 +133,14 @@ export const projects = [
         imageUrl: fitnessImg,
         link: "https://github.com/johntrinhvu/fitness-tracker",
     },
-    {
-        title: "Checkers",
-        subtitle: "Recreation of Checkers in JS",
-        description: "My very first project done in HTML/CSS and JavaScript. A classic board game where two players face off against each other, with the objective of collecting all of the other player's pieces. ",
-        tags: ["HTML", "CSS", "JavaScript"],
-        imageUrl: checkersImg,
-        link: "https://github.com/johntrinhvu/Checkers",
-    }
+    // {
+    //     title: "Checkers",
+    //     subtitle: "Recreation of Checkers in JS",
+    //     description: "My very first project done in HTML/CSS and JavaScript. A classic board game where two players face off against each other, with the objective of collecting all of the other player's pieces. ",
+    //     tags: ["HTML", "CSS", "JavaScript"],
+    //     imageUrl: checkersImg,
+    //     link: "https://github.com/johntrinhvu/Checkers",
+    // }
 ] as const;
 
 export const jobs = [
