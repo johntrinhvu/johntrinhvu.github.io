@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.d099feee.css",
-    "main.js": "/static/js/main.0a79b968.js",
+    "main.js": "/static/js/main.48981057.js",
+    "static/media/OCTImg.png": "/static/media/OCTImg.56acaa8a7ec5ae0e4a49.png",
     "static/media/FitnessTrackerNew.png": "/static/media/FitnessTrackerNew.6d25b7ef3161c06f4eb4.png",
     "static/media/VeeFriendsWebPage.png": "/static/media/VeeFriendsWebPage.f408a9a97450c4bf1132.png",
     "static/media/BucketList.png": "/static/media/BucketList.3e790be0c1fb5662980a.png",
     "static/media/profilePicture.png": "/static/media/profilePicture.2a1b5eb8a3ebf9fa6613.png",
     "static/media/LegendsPage.png": "/static/media/LegendsPage.1c1ca778ae63dd51ff82.png",
     "static/media/NightOwlNew.png": "/static/media/NightOwlNew.37438337841b245c7428.png",
-    "static/media/Checkers.png": "/static/media/Checkers.f8e1877284eb84681e1e.png",
     "static/media/RideHub.png": "/static/media/RideHub.eddc9ff058cdd72ce4ae.png",
     "static/media/CardifyBetter.png": "/static/media/CardifyBetter.a120eb3c5e2bce97581c.png",
     "static/media/metaLogo.png": "/static/media/metaLogo.9a841f3a45a3db62c3e6.png",
@@ -16,10 +16,10 @@
     "static/media/UCIOIT.jpeg": "/static/media/UCIOIT.234d58e1c7614bc99894.jpeg",
     "index.html": "/index.html",
     "main.d099feee.css.map": "/static/css/main.d099feee.css.map",
-    "main.0a79b968.js.map": "/static/js/main.0a79b968.js.map"
+    "main.48981057.js.map": "/static/js/main.48981057.js.map"
   },
   "entrypoints": [
     "static/css/main.d099feee.css",
-    "static/js/main.0a79b968.js"
+    "static/js/main.48981057.js"
   ]
 }
