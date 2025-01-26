@@ -1,3 +1,4 @@
+import Neuroflowimg from "./images/NeuroFlowImg.png";
 import octImg from "./images/OCTImg.png";
 import bucketlistImg from "./images/BucketList.png";
 import ridehubImg from "./images/RideHub.png";
@@ -70,6 +71,14 @@ export const skills = [
 
 export const projects = [
     {
+        title: "NeuroFlow",
+        subtitle: "Calculate stress level based on blood flow",
+        description: "Utilizes a novel, scalable means of gathering biological data Correlates that biological data to a quantitative metric for stress, derived from Heart Rate Variation (HRV).",
+        tags: ["React", "Python", "FastAPI", "PostGresql", "Neurokit2"],
+        imageUrl: Neuroflowimg,
+        link: "https://github.com/johntrinhvu/NeuroFlow"
+    },
+    {
         title: "OCT Noise Cancellation",
         subtitle: "Removes the unnecessary noise from images of the cornea",
         description: "Input a folder of OCT images and output a folder of cleaned, noiseless images of the eye using machine learning algorithms.",
@@ -133,14 +142,14 @@ export const projects = [
         imageUrl: fitnessImg,
         link: "https://github.com/johntrinhvu/fitness-tracker",
     },
-    // {
-    //     title: "Checkers",
-    //     subtitle: "Recreation of Checkers in JS",
-    //     description: "My very first project done in HTML/CSS and JavaScript. A classic board game where two players face off against each other, with the objective of collecting all of the other player's pieces. ",
-    //     tags: ["HTML", "CSS", "JavaScript"],
-    //     imageUrl: checkersImg,
-    //     link: "https://github.com/johntrinhvu/Checkers",
-    // }
+    {
+        title: "Checkers",
+        subtitle: "Recreation of Checkers in JS",
+        description: "My very first project done in HTML/CSS and JavaScript. A classic board game where two players face off against each other, with the objective of collecting all of the other player's pieces. ",
+        tags: ["HTML", "CSS", "JavaScript"],
+        imageUrl: checkersImg,
+        link: "https://github.com/johntrinhvu/Checkers",
+    }
 ] as const;
 
 export const jobs = [
