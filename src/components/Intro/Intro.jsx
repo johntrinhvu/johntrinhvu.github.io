@@ -63,7 +63,7 @@ export default function Intro() {
 
                 <a
                     className="text-white hover:text-purple-300 group bg-gray-800 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition border-black" 
-                    href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:98588b1a-e0a2-4755-a8f7-1b85d15d542b"
+                    href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:a74b2ae2-057e-4f46-9a92-fa621f4c9eb2"
                     target="_blank"
                     rel="noreferrer"
                 >
