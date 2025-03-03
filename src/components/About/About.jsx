@@ -20,15 +20,15 @@ export default function About() {
             <h1 className="text-gray-100 text-3xl font-semibold mb-8">About Me</h1>
             <div className="bg-gray-800 w-full p-4 rounded-xl border-gray-700 border-2">
                 <p className="mb-3">
-                    I am a third year <span className="text-violet-400">B.S. Software Engineering</span> major pursuing a <span className="text-violet-400">Mathematics</span> minor {" "}
-                    at the <span className="text-blue-300 font-semibold">University of California, Irvine</span>. I am currently an <span className="text-violet-400">AI/ML Researcher</span> at the <span className="text-blue-300 font-semibold">Beckman Laser Institute</span>, 
+                    I am a fourth year <span className="text-violet-400">B.S. Software Engineering</span> major pursuing a <span className="text-violet-400">Mathematics</span> minor {" "}
+                    at the <span className="text-blue-300 font-semibold">University of California, Irvine</span>. I am currently a <span className="text-violet-400">Machine Learning Researcher</span> at the <span className="text-blue-300 font-semibold">Beckman Laser Institute</span>, 
                     as well as a <span className="text-violet-400">Software Development Assistant</span> for my school's IT Department.
                     I will be joining <span className="text-blue-300 font-bold">Meta</span> as a <span className="text-violet-400">Software Engineer Intern</span> this summer.
                     
                 </p>
                 <p>
                     If I'm not at my computer coding, some hobbies that I have are that I enjoy playing guitar, <span className="text-violet-400">lifting weights</span>, going on
-                    hikes, playing <span className="text-violet-400">League of Legends</span>, drinking boba, eating lots of food, watching anime, bass fishing, and playing football.
+                    hikes, playing <span className="text-violet-400">League of Legends</span>, drinking boba, cafe hopping, eating lots of food, watching anime, bass fishing, and playing football.
                 </p>
             </div>
         </motion.section>

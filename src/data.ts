@@ -198,11 +198,11 @@ export const jobs = [
     },
     {
         title: "Software Development Assistant",
-        date: "Nov 2023 - Current",
+        date: "Jan 2024 - Current",
         company: "UCI Office of Information Technology, GDIT & UGA",
         points: [
-            "Collaborated with the Development Lead to understand product requirements and provide roughly 230 ServiceNow tickets in addition to closing around 120 JIRA tickets.",
-            "Execute several SQL queries to retrieve, analyze, and manage critical data.",
+            "Automated a secure data transfer workflow with GoAnywhere MFT, scripting custom file extractions and managing the transfer of roughly 400 ZIP files, enhancing productivity by 92%, ultimately reducing a 1-hour task to only 5 minutes.",
+            "Authored 15 pages of comprehensive JIRA documentation detailing various company processes to streamline team workflows. Additionally, execute complex SQL queries to download critical data for over 7,000 users.",
         ],
         icon: uciOIT, 
         iconBg: "#fff",
