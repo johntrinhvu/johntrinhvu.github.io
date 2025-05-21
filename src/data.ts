@@ -1,3 +1,5 @@
+import LeetBroImg from "./images/LeetBro.png";
+import CakesByViviiImg from "./images/CakesVivii.png";
 import Neuroflowimg from "./images/NeuroFlowImg.png";
 import octImg from "./images/OCTImg.png";
 import bucketlistImg from "./images/BucketList.png";
@@ -70,6 +72,22 @@ export const skills = [
 ] as const;
 
 export const projects = [
+    {
+      title: "Cakes By Vivii",
+      subtitle: "Personalized Cake Ordering Website",
+      description: "Order cakes that are personally designed by the one and only Vivii! With many different flavors to choose from and many different styles to order, the amount of combinations are limitless.",
+      tags: ["React", "Tailwind CSS", "Firebase"],
+      imageUrl: CakesByViviiImg,
+      link: "https://github.com/johntrinhvu/cakes-by-vivii"
+    },
+    {
+      title: "LeetBro",
+      subtitle: "Voice Generated AI paired brogrammer",
+      description: "LeetBro is built right into LeetCode. Instead of giving you solutions, it listens to your questions, reads your code, and guides you with personalized hints and strategies.",
+      tags: ["GeminiAI", "WebSpeechAPI", "JavaScript", "CSS"],
+      imageUrl: LeetBroImg,
+      link: "https://github.com/johntrinhvu/LeetBro"
+    },
     {
         title: "NeuroFlow",
         subtitle: "Calculate stress level based on blood flow",
