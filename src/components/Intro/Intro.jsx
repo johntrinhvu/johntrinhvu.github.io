@@ -40,7 +40,7 @@ export default function Intro() {
                 animate={{ opacity: 1, y: 0 }}
             >
                 Hi, I'm <span className="font-bold text-fuchsia-800">John Trinh Vu</span>. I'm a{" "}
-                <span className="">Full Stack Software Developer</span>.
+                <span className="">Full Stack Software Engineer</span>.
             </motion.h1>
 
             <motion.div
@@ -63,7 +63,7 @@ export default function Intro() {
 
                 <a
                     className="text-white hover:text-purple-300 group bg-gray-800 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition border-black" 
-                    href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:a74b2ae2-057e-4f46-9a92-fa621f4c9eb2"
+                    href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:4f891729-a2d2-42f5-a1bd-3077924e9371"
                     target="_blank"
                     rel="noreferrer"
                 >

@@ -56,19 +56,12 @@ export const skills = [
     "React.js",
     "Node.js",
     "Express.js",
-    "C",
-    "Blazor WASM",
-    "Web3",
     "SQL",
     ".NET",
     "Artificial Intelligence",
     "Machine Learning",
     "PyTorch",
     "TensorFlow",
-    "MIPS Assembly",
-    "Swift",
-    "Kotlin",
-    "Lua",
 ] as const;
 
 export const projects = [
@@ -84,7 +77,7 @@ export const projects = [
       title: "LeetBro",
       subtitle: "Voice Generated AI paired brogrammer",
       description: "LeetBro is built right into LeetCode. Instead of giving you solutions, it listens to your questions, reads your code, and guides you with personalized hints and strategies.",
-      tags: ["GeminiAI", "WebSpeechAPI", "JavaScript", "CSS"],
+      tags: ["Gemini AI", "WebSpeech API", "JavaScript", "CSS"],
       imageUrl: LeetBroImg,
       link: "https://github.com/johntrinhvu/LeetBro"
     },
@@ -173,17 +166,17 @@ export const projects = [
 export const jobs = [
     {
         title: "Software Engineer Intern",
-        date: "Jun 2025 - Sept 2025",
+        date: "Jun 2025 - Current",
         company: "Meta",
         points: [
-            "Incoming Software Engineer",
+            "Incoming Software Engineer under the Facebook Messenger Team",
         ],
         icon: metaLogo,
         iconBg: "#fff",
     },
     {
         title: "AI & Machine Learning Researcher",
-        date: "Oct 2024 - Current",
+        date: "Oct 2024 - Jun 2025",
         company: "Beckman Laser Institute",
         points: [
             "Developed and trained a custom U-Net Model in TensorFlow to enhance OCT images, achieving a 99.45% accuracy in noise reduction and corneal layer segmentation.",
@@ -216,7 +209,7 @@ export const jobs = [
     },
     {
         title: "Software Development Assistant",
-        date: "Jan 2024 - Current",
+        date: "Jan 2024 - Jun 2025",
         company: "UCI Office of Information Technology, GDIT & UGA",
         points: [
             "Automated a secure data transfer workflow with GoAnywhere MFT, scripting custom file extractions and managing the transfer of roughly 400 ZIP files, enhancing productivity by 92%, ultimately reducing a 1-hour task to only 5 minutes.",
