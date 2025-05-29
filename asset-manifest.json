@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d099feee.css",
-    "main.js": "/static/js/main.e54c340a.js",
+    "main.js": "/static/js/main.a6dabe4b.js",
     "static/media/OCTImg.png": "/static/media/OCTImg.56acaa8a7ec5ae0e4a49.png",
     "static/media/FitnessTrackerNew.png": "/static/media/FitnessTrackerNew.6d25b7ef3161c06f4eb4.png",
     "static/media/VeeFriendsWebPage.png": "/static/media/VeeFriendsWebPage.f408a9a97450c4bf1132.png",
@@ -20,10 +20,10 @@
     "static/media/UCIOIT.jpeg": "/static/media/UCIOIT.234d58e1c7614bc99894.jpeg",
     "index.html": "/index.html",
     "main.d099feee.css.map": "/static/css/main.d099feee.css.map",
-    "main.e54c340a.js.map": "/static/js/main.e54c340a.js.map"
+    "main.a6dabe4b.js.map": "/static/js/main.a6dabe4b.js.map"
   },
   "entrypoints": [
     "static/css/main.d099feee.css",
-    "static/js/main.e54c340a.js"
+    "static/js/main.a6dabe4b.js"
   ]
 }
