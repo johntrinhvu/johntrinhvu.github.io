@@ -51,6 +51,8 @@ export const skills = [
     "Python",
     "Java",
     "C#",
+    "Objective-C",
+    "Swift",
     "JavaScript",
     "TypeScript",
     "React.js",
@@ -169,7 +171,7 @@ export const jobs = [
         date: "Jun 2025 - Current",
         company: "Meta",
         points: [
-            "Incoming Software Engineer under the Facebook Messenger Team",
+            "Software Engineer for Facebook Messenger, iOS Engineering.",
         ],
         icon: metaLogo,
         iconBg: "#fff",
