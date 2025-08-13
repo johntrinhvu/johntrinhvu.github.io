@@ -169,9 +169,14 @@ export const jobs = [
     {
         title: "Software Engineer Intern",
         date: "Jun 2025 - Current",
-        company: "Meta",
+        company: "Facebook (Meta)",
         points: [
-            "Software Engineer for Facebook Messenger, iOS Engineering.",
+            "Migrated deprecated iOS APIs (e.g., contentEdgeInsets, titleEdgeInsets, imageEdgeInsets) to modern UIButtonConfiguration APIs in Objective-C/Swift to align with iOS 15+ and macCatalyst 13.1+ standards.",
+            "Delivered a full-stack iOS refresh of Facebook Messenger’s Media Gallery, creating a robust filtering algorithm for media type (images/videos) and sender identity, as well as building UI components for single/multi-select actions.",
+            "Partnered closely with design and product leads to align implementation with UX goals, integrating Meta’s internal APIs and implementing long-press contextual menus.",
+            "Optimized Messenger’s Media Gallery architecture by reducing redundant API calls that caused frequent page reloads, improving load efficiency and responsiveness; engineering changes cut unnecessary requests by an estimated 30-40%, reducing latency.",
+            "Refactored outdated legacy Objective-C code into modern, maintainable Objective-C/Swift implementations, boosting maintainability and team productivity, including developing comprehensive Unit and Jest tests achieving 100% pass rates.",
+            "Proposed and prototyped stretch features for the project, including AI-driven search filtering leveraging computer vision to identify objects within photos and videos."
         ],
         icon: metaLogo,
         iconBg: "#fff",
