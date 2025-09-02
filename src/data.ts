@@ -172,11 +172,11 @@ export const jobs = [
         company: "Facebook (Meta)",
         points: [
             "Migrated deprecated iOS APIs (e.g., contentEdgeInsets, titleEdgeInsets, imageEdgeInsets) to modern UIButtonConfiguration APIs in Objective-C/Swift to align with iOS 15+ and macCatalyst 13.1+ standards.",
-            "Delivered a full-stack iOS refresh of Facebook Messenger’s Media Gallery, creating a robust filtering algorithm for media type (images/videos) and sender identity, as well as building UI components for single/multi-select actions.",
-            "Partnered closely with design and product leads to align implementation with UX goals, integrating Meta’s internal APIs and implementing long-press contextual menus.",
-            "Optimized Messenger’s Media Gallery architecture by reducing redundant API calls that caused frequent page reloads, improving load efficiency and responsiveness; engineering changes cut unnecessary requests by an estimated 30-40%, reducing latency.",
-            "Refactored outdated legacy Objective-C code into modern, maintainable Objective-C/Swift implementations, boosting maintainability and team productivity, including developing comprehensive Unit and Jest tests achieving 100% pass rates.",
-            "Proposed and prototyped stretch features for the project, including AI-driven search filtering leveraging computer vision to identify objects within photos and videos."
+            "Delivered a full-stack iOS refresh of Facebook Messenger’s Media Gallery, creating a robust filtering algorithm for media type (images/videos) and sender identity, public testing these changes on roughly 3-4 million users worldwide with an overall positive result outcome of 84% of users liking the change.",
+            "Partnered closely with design and product leads to align implementation with UX goals to build several UI features and algorithms, including multi-selection as well as long press contextual-menus for saving, copying, sharing, and forwarding photos/videos in the media gallery, whilst simultaneously integrating Meta’s internal APIs.",
+            "Optimized Messenger’s Media Gallery architecture by reducing redundant API calls that caused frequent page reloads, improving load efficiency and responsiveness; cutting unnecessary requests by an estimated 30-40%.",
+            "Refactored outdated legacy Objective-C code into modern, maintainable Objective-C/Swift implementations, boosting maintainability and team productivity, including developing 2400+ lines of Unit test code.",
+            "Published detailed technical documentation of the Media Gallery Refresh project, covering system design, code references, and developer workflows, serving as the primary reference for engineers and product partners."
         ],
         icon: metaLogo,
         iconBg: "#fff",
