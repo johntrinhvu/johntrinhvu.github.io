@@ -13,7 +13,6 @@ import fitnessImg from "./images/FitnessTrackerNew.png";
 import uciOIT from "./images/UCIOIT.jpeg";
 import gaImg from "./images/GA.png";
 import ucieImg from "./images/UCIE.png";
-import mingleyImg from "./images/mingley.png";
 import veeFriendLogo from "./images/veefriends.png";
 import blockhouseLogo from "./images/blockhouse_capital_logo.jpeg";
 import bliLogo from "./images/bliIcon.png";
@@ -167,9 +166,19 @@ export const projects = [
 
 export const jobs = [
     {
+      title: "Software Engineer",
+      date: "Nov 2025 - Current",
+      company: "Meta",
+      points: [
+          "Incoming SWE for FB Messenger Media, iOS Engineering."
+      ],
+      icon: metaLogo,
+      iconBg: "#fff",
+    },
+    {
         title: "Software Engineer Intern",
-        date: "Jun 2025 - Current",
-        company: "Facebook (Meta)",
+        date: "Jun 2025 - Sept 2025",
+        company: "Meta",
         points: [
             "Migrated deprecated iOS APIs (e.g., contentEdgeInsets, titleEdgeInsets, imageEdgeInsets) to modern UIButtonConfiguration APIs in Objective-C/Swift to align with iOS 15+ and macCatalyst 13.1+ standards.",
             "Delivered a full-stack iOS refresh of Facebook Messenger’s Media Gallery, creating a robust filtering algorithm for media type (images/videos) and sender identity, public testing these changes on roughly 3-4 million users worldwide with an overall positive result outcome of 84% of users liking the change.",

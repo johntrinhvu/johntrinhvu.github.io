@@ -20,7 +20,7 @@ export default function About() {
             <h1 className="text-gray-100 text-3xl font-semibold mb-8">About Me</h1>
             <div className="bg-gray-800 w-full p-4 rounded-xl border-gray-700 border-2">
                 <p className="mb-3">
-                    I'm a new graduate <span className="text-violet-400">B.S. Software Engineer</span> from the <span className="text-blue-300 font-semibold">University of California, Irvine</span>. I'm currently working at <span className="text-blue-300 font-bold">Meta</span> this summer as a <span className="text-violet-400">Software Engineer</span> for the Facebook Messenger app under the iOS Engineering team.
+                    I'm a recent graduate <span className="text-violet-400">B.S. Software Engineer</span> from the <span className="text-blue-300 font-semibold">University of California, Irvine</span>. I'm currently working at <span className="text-blue-300 font-bold">Meta</span> as a <span className="text-violet-400">Software Engineer, iOS Engineering</span> for Facebook Messenger under their Media team.
                     
                 </p>
                 <p>
