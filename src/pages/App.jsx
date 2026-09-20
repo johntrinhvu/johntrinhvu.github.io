@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { getAccessToken } from "../spotify/spotify";
 import { ActiveSectionProvider } from "../context/ActiveSectionContext/ActiveSectionContext";
 import { useActiveSection } from "../hooks";
 import Header from "../components/Header/Header";
@@ -34,6 +35,25 @@ function Pages() {
 }
 
 export default function App() {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+  
+    if (code) {
+      getAccessToken(code)
+        .then(() => {
+          window.history.replaceState(
+            {},
+            document.title,
+            window.location.pathname
+          );
+        })
+        .catch((err) => {
+          console.error("Spotify authentication failed:", err);
+        });
+    }
+  }, []);
+
   return (
     <ActiveSectionProvider>
       <Header />

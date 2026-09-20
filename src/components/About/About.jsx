@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { photos, watching, nowPlaying, topTrack } from "../../data";
+import { photos } from "../../data";
+import SpotifyTabs from "../../components/SpotifyTabs/SpotifyTabs";
 
 function PhotoCarousel() {
   const railRef = useRef(null);
@@ -101,83 +102,6 @@ function WatchingRail() {
           ))}
         </div>
       )}
-    </div>
-  );
-}
-
-function SpotifyTabs() {
-  const [tab, setTab] = useState("now");
-  const track = tab === "now" ? nowPlaying : topTrack;
-  const label = tab === "now" ? "NOW PLAYING" : "TOP TRACK · ALL TIME";
-
-  const btnRefs = useRef({});
-  const [glassStyle, setGlassStyle] = useState({ left: 0, width: 0 });
-
-  const moveGlass = (key) => {
-    const btn = btnRefs.current[key];
-    if (btn) setGlassStyle({ left: btn.offsetLeft, width: btn.offsetWidth });
-  };
-
-  useEffect(() => {
-    moveGlass(tab);
-    window.addEventListener("resize", () => moveGlass(tab));
-    return () => window.removeEventListener("resize", () => moveGlass(tab));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [tab]);
-
-  return (
-    <div className="py-14">
-      <div className="flex justify-between items-baseline mb-6">
-        <h2 className="text-[19px] font-display font-semibold">Current music taste</h2>
-        <span className="text-[11px] tracking-wider text-steel">SPOTIFY</span>
-      </div>
-
-      <div className="relative flex justify-center gap-1.5 mb-5">
-        <div className="relative flex gap-1.5 border border-line rounded-full p-1 bg-panel">
-          <span
-            className="absolute top-1 bottom-1 rounded-full bg-periwinkle transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)]"
-            style={{ left: glassStyle.left, width: glassStyle.width }}
-            aria-hidden="true"
-          />
-          <button
-            ref={(el) => (btnRefs.current["now"] = el)}
-            onClick={() => setTab("now")}
-            className={`relative z-10 text-xs px-4 py-1.5 rounded-full transition-colors duration-300 ${
-              tab === "now" ? "text-bg" : "text-lo hover:text-hi"
-            }`}
-          >
-            Recently played
-          </button>
-          <button
-            ref={(el) => (btnRefs.current["top"] = el)}
-            onClick={() => setTab("top")}
-            className={`relative z-10 text-xs px-4 py-1.5 rounded-full transition-colors duration-300 ${
-              tab === "top" ? "text-bg" : "text-lo hover:text-hi"
-            }`}
-          >
-            Top tracks
-          </button>
-        </div>
-      </div>
-
-      <div className="max-w-[420px] mx-auto">
-        <div className="bg-panel border border-line rounded-xl p-4 flex items-center gap-3.5">
-          <div className="w-[52px] h-[52px] rounded-full bg-gradient-to-br from-navy to-panel2 flex items-center justify-center">
-            {tab === "now" && (
-              <div className="flex gap-0.5 items-end h-3.5">
-                <span className="eq-bar w-0.5 bg-periwinkle" style={{ animationDelay: "0s" }} />
-                <span className="eq-bar w-0.5 bg-periwinkle" style={{ animationDelay: "0.2s" }} />
-                <span className="eq-bar w-0.5 bg-periwinkle" style={{ animationDelay: "0.4s" }} />
-              </div>
-            )}
-          </div>
-          <div>
-            <span className="text-[11px] tracking-wider text-steel block mb-1">{label}</span>
-            <p className="text-sm text-hi mb-0.5">{track.title}</p>
-            <p className="text-xs text-faint m-0">{track.artist}</p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
