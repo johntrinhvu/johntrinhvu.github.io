@@ -1,29 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.d099feee.css",
-    "main.js": "/static/js/main.fd40dae2.js",
+    "main.css": "/static/css/main.6998250b.css",
+    "main.js": "/static/js/main.31b77b71.js",
     "static/media/OCTImg.png": "/static/media/OCTImg.56acaa8a7ec5ae0e4a49.png",
-    "static/media/FitnessTrackerNew.png": "/static/media/FitnessTrackerNew.6d25b7ef3161c06f4eb4.png",
-    "static/media/VeeFriendsWebPage.png": "/static/media/VeeFriendsWebPage.f408a9a97450c4bf1132.png",
-    "static/media/BucketList.png": "/static/media/BucketList.3e790be0c1fb5662980a.png",
     "static/media/NeuroFlowImg.png": "/static/media/NeuroFlowImg.3352d5f0a2c544438020.png",
-    "static/media/profilePicture.png": "/static/media/profilePicture.2a1b5eb8a3ebf9fa6613.png",
-    "static/media/LegendsPage.png": "/static/media/LegendsPage.1c1ca778ae63dd51ff82.png",
-    "static/media/NightOwlNew.png": "/static/media/NightOwlNew.37438337841b245c7428.png",
-    "static/media/Checkers.png": "/static/media/Checkers.f8e1877284eb84681e1e.png",
+    "static/media/logo.png": "/static/media/logo.25d02f92f5b68b247b6e.png",
     "static/media/LeetBro.png": "/static/media/LeetBro.fdc7d6b85b846dec8fed.png",
     "static/media/CakesVivii.png": "/static/media/CakesVivii.c0ba0aca811f69de8d76.png",
-    "static/media/RideHub.png": "/static/media/RideHub.eddc9ff058cdd72ce4ae.png",
-    "static/media/CardifyBetter.png": "/static/media/CardifyBetter.a120eb3c5e2bce97581c.png",
+    "static/media/uci.png": "/static/media/uci.a79b55fb1fa4f38e2568.png",
     "static/media/metaLogo.png": "/static/media/metaLogo.9a841f3a45a3db62c3e6.png",
+    "static/media/profilePicture.jpg": "/static/media/profilePicture.84922367c972e94cc408.jpg",
+    "static/media/uci_oit.jpeg": "/static/media/uci_oit.a16c2c309ef9822c96da.jpeg",
     "static/media/veefriends.png": "/static/media/veefriends.e4f0d133e5b485b9d776.png",
-    "static/media/UCIOIT.jpeg": "/static/media/UCIOIT.234d58e1c7614bc99894.jpeg",
     "index.html": "/index.html",
-    "main.d099feee.css.map": "/static/css/main.d099feee.css.map",
-    "main.fd40dae2.js.map": "/static/js/main.fd40dae2.js.map"
+    "main.6998250b.css.map": "/static/css/main.6998250b.css.map",
+    "main.31b77b71.js.map": "/static/js/main.31b77b71.js.map"
   },
   "entrypoints": [
-    "static/css/main.d099feee.css",
-    "static/js/main.fd40dae2.js"
+    "static/css/main.6998250b.css",
+    "static/js/main.31b77b71.js"
   ]
 }
