@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.de67de87.css",
-    "main.js": "/static/js/main.7f738f6b.js",
+    "main.js": "/static/js/main.94ffcfec.js",
     "static/media/OCTImg.png": "/static/media/OCTImg.56acaa8a7ec5ae0e4a49.png",
     "static/media/NeuroFlowImg.png": "/static/media/NeuroFlowImg.3352d5f0a2c544438020.png",
     "static/media/logo.png": "/static/media/logo.25d02f92f5b68b247b6e.png",
@@ -14,10 +14,10 @@
     "static/media/veefriends.png": "/static/media/veefriends.e4f0d133e5b485b9d776.png",
     "index.html": "/index.html",
     "main.de67de87.css.map": "/static/css/main.de67de87.css.map",
-    "main.7f738f6b.js.map": "/static/js/main.7f738f6b.js.map"
+    "main.94ffcfec.js.map": "/static/js/main.94ffcfec.js.map"
   },
   "entrypoints": [
     "static/css/main.de67de87.css",
-    "static/js/main.7f738f6b.js"
+    "static/js/main.94ffcfec.js"
   ]
 }
