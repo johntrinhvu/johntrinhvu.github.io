@@ -1,181 +1,137 @@
-import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { links } from "../../data.ts";
-import clsx from "clsx";
-import { useActiveSectionContext } from "../../context/ActiveSectionContext/ActiveSectionContext.tsx";
+import React, { useEffect, useRef, useState } from "react";
+import { useActiveSection } from "../../hooks";
 
+const TABS = [
+  { key: "home", label: "home" },
+  { key: "experience", label: "experience" },
+  { key: "contact", label: "contact" },
+];
 
 export default function Header() {
-    const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-    const [isOpen, setIsOpen] = useState(false);
+  const { activeSection, setActiveSection } = useActiveSection();
+  const btnRefs = useRef({});
+  const scrollPositions = useRef({});
+  const [glassStyle, setGlassStyle] = useState({ left: 0, width: 0 });
 
-    const toggleMenu = () => setIsOpen(!isOpen);
-    const menuVars = {
-        initial: {
-            scaleY: 0,
-        },
-        animate: {
-            scaleY: 1,
-            transition: {
-                duration: 0.5,
-                ease: [0.12, 0, 0.39, 0],
-            }
-        },
-        exit: {
-            scaleY: 0,
-            transition: {
-                delay: 0.5,
-                duration: 0.5,
-                ease: [0.22, 1, 0.36, 1],
-            }
-        },
-    };
+  const [isLight, setIsLight] = useState(() => {
+    return localStorage.getItem("theme") === "light";
+  });
 
-    const mobileLinkVars = {
-        initial: {
-            y: "30vh",
-            transition: {
-                duration: 0.5,
-            }
-        },
-        open: {
-            y: 0,
-            transition: {
-                ease: [0, 0.55, 0.45, 1],
-                duration: 0.7,
-            }
-        }
+  const handleTabClick = (key) => {
+    if (key === activeSection) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      return;
     }
 
-    const containerVars = {
-        initial: {
-            transition: {
-                staggerChildren: 0.09,
-                staggerDirection: -1,
-            }
-        },
-        open: {
-            transition: {
-                delayChildren: 0.3,
-                staggerChildren: 0.09,
-                staggerDirection: 1,
-            }
-        },
-    }
+    scrollPositions.current[activeSection] = window.scrollY;
+    setActiveSection(key);
 
-    return (
-        <header className="z-[999] relative">
-            <AnimatePresence>
-                {
-                    isOpen && (
-                        <motion.div 
-                            variants={menuVars}
-                            initial="initial"
-                            animate="animate"
-                            exit="exit"
-                            className="origin-top fixed left-0 top-16 w-full h-screen sm:hidden bg-gray-950 bg-opacity-80 text-gray-300 pb-20 backdrop-blur-[0.5rem]"
-                        >
-                            <motion.div 
-                                variants={containerVars}
-                                initial="initial"
-                                animate="open"
-                                exit="initial"
-                                className="flex flex-col h-full justify-center items-center gap-4"
-                            >
-                                {
-                                    links.map((link, index) => {
-                                        return (
-                                            <div className="text-gray-500">
-                                                <motion.div
-                                                    variants={mobileLinkVars} 
-                                                >
-                                                    <a
-                                                        className={clsx("relative text-2xl flex flex-col w-full items-center justify-center px-6 py-4 hover:text-purple-300 transition", {
-                                                            "text-purple-400" : activeSection === link.name,
-                                                        })} 
-                                                        key={index}
-                                                        href={link.hash}
-                                                        onClick={() => {
-                                                            setActiveSection(link.name)
-                                                            setTimeOfLastClick(Date.now())
-                                                        }}
-                                                    >
-                                                        {link.name}
-                                                    </a>
-                                                </motion.div>
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </motion.div>
-                        </motion.div>
-                    )
-                }
-            </AnimatePresence>
-            <motion.div 
-                className="flex justify-between fixed top-0 left-1/2 h-[4.5rem] w-full sm:border sm:border-black/40 sm:border-opacity-75 
-                                    bg-gray-950 bg-opacity-80 sm:shadow-lg sm:shadow-black/[0.03] backdrop-blur-[0.5rem]
-                                    sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full"
-                initial={{ y: -100, x: "-50%", opacity: 0 }}
-                animate={{ y: 0, x: "-50%", opacity: 1 }}
-            >
-                <h1 className="sm:hidden text-2xl pl-5 pt-5 text-white">john trinh vu</h1>
-                <button className="sm:hidden pr-6" onClick={toggleMenu}>
-                    <FontAwesomeIcon
-                        className={clsx("w-6 h-6 transition", {
-                            "text-white": isOpen,
-                            "text-gray-400 hover:text-gray-200": !isOpen,
-                        })}
-                        icon={faBars} 
-                    />
-                </button>
-            </motion.div>
-            <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-                <ul 
-                    className="hidden sm:flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500
-                                        sm:w-[initial] sm:flex-nowrap sm:gap-5"
-                >
-                    {
-                        links.map(link => (
-                            <motion.li 
-                                className="h-3/4 flex items-center justify-center relative"
-                                key={link.hash}
-                                initial={{ y: -100, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                            >
-                                    <a 
-                                        className={clsx("flex w-full items-center justify-center px-3 py-3 hover:text-gray-300 transition", {
-                                            "text-gray-200" : activeSection === link.name,
-                                        })} 
-                                        href={link.hash}
-                                        onClick={() => {
-                                            setActiveSection(link.name)
-                                            setTimeOfLastClick(Date.now())
-                                        }}
-                                    >
-                                        {link.name}
-                                        {
-                                            link.name === activeSection && (
-                                                <motion.span 
-                                                    className="bg-gray-800 rounded-full absolute inset-0 -z-10"
-                                                    layoutId="activeSection"
-                                                    transition={{
-                                                        type: "spring",
-                                                        stiffness: 380,
-                                                        damping: 30,
-                                                    }}
-                                                >
-                                                </motion.span>
-                                            )
-                                        }
-                                    </a>
-                            </motion.li>
-                        ))
-                    }
-                </ul>
-            </nav>
-        </header>
-    )
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: scrollPositions.current[key] || 0,
+        behavior: "smooth",
+      });
+    });
+  };
+
+  const toggleTheme = () => {
+    setIsLight((prev) => {
+      const next = !prev;
+
+      document.documentElement.dataset.theme = next ? "light" : "dark";
+      localStorage.setItem("theme", next ? "light" : "dark");
+
+      return next;
+    });
+  };
+
+  const moveGlass = () => {
+    const btn = btnRefs.current[activeSection];
+
+    if (btn) {
+      setGlassStyle({
+        left: btn.offsetLeft,
+        width: btn.offsetWidth,
+      });
+    }
+  };
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = isLight ? "light" : "dark";
+  }, [isLight]);
+
+  useEffect(() => {
+    moveGlass();
+    window.addEventListener("resize", moveGlass);
+
+    return () => window.removeEventListener("resize", moveGlass);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeSection]);
+
+  return (
+    <div className="fixed top-[18px] left-1/2 -translate-x-1/2 z-50 flex items-center gap-2.5">
+      
+      {/* Main navbar */}
+      <nav
+        className="relative flex gap-0.5 rounded-full p-1.5 border border-line bg-glass backdrop-blur-2xl backdrop-saturate-150 shadow-[0_8px_30px_rgba(0,0,0,0.35)]"
+        role="tablist"
+        aria-label="Site sections"
+      >
+        <span
+          className="absolute top-1.5 bottom-1.5 rounded-full bg-gradient-to-br from-periwinkle to-steel shadow-[0_6px_16px_var(--active-shadow)] transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)]"
+          style={{
+            left: glassStyle.left,
+            width: glassStyle.width,
+          }}
+          aria-hidden="true"
+        />
+
+        {TABS.map((tab) => (
+          <button
+            key={tab.key}
+            ref={(el) => (btnRefs.current[tab.key] = el)}
+            role="tab"
+            aria-selected={activeSection === tab.key}
+            onClick={() => handleTabClick(tab.key)}
+            className={`relative z-10 text-[13px] px-5 py-2.5 rounded-full transition-colors duration-300 ${
+              activeSection === tab.key
+                ? "text-bg"
+                : "text-lo hover:text-hi"
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </nav>
+
+      {/* Theme button */}
+      <button
+        onClick={toggleTheme}
+        aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
+        className="relative w-[46px] h-[46px] flex items-center justify-center rounded-full border border-line bg-glass backdrop-blur-2xl backdrop-saturate-150 shadow-[0_8px_30px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-105"
+      >
+        <span
+          className={`absolute text-[18px] leading-none transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] ${
+            isLight
+              ? "opacity-0 rotate-90 scale-50"
+              : "opacity-100 rotate-0 scale-100"
+            }`}
+        >
+          ☼
+        </span>
+        <span
+          className={`absolute text-[18px] leading-none transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] ${
+            isLight
+              ? "opacity-100 rotate-0 scale-100"
+              : "opacity-0 -rotate-90 scale-50"
+            }`}
+        >
+          ☾
+        </span>
+      </button>
+    </div>
+  );
 }

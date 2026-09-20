@@ -1,33 +1,193 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAddressCard } from "@fortawesome/free-regular-svg-icons";
-import { motion } from "framer-motion";
-import { useSectionInView } from "../../hooks.tsx";
+import React, { useEffect, useRef, useState } from "react";
+import { photos, watching, nowPlaying, topTrack } from "../../data";
+
+function PhotoCarousel() {
+  const railRef = useRef(null);
+
+  const scrollRail = (dir) => {
+    const rail = railRef.current;
+    if (!rail) return;
+    const card = rail.querySelector(".photo-slide");
+    const step = card ? card.getBoundingClientRect().width + 14 : 200;
+    rail.scrollBy({ left: dir * step, behavior: "smooth" });
+  };
+
+  return (
+    <div className="py-14 border-b border-line">
+      <div className="flex justify-between items-baseline mb-6">
+        <h2 className="text-[19px] font-display font-semibold">Recently in life</h2>
+        <span className="text-[11px] tracking-wider text-steel">PHOTOS</span>
+      </div>
+      <div ref={railRef} className="rail flex gap-3.5 items-center overflow-x-auto">
+        {photos.map((p, i) => (
+          <div
+            key={i}
+            className={`photo-slide flex-shrink-0 rounded-xl border border-line bg-gradient-to-br from-navy to-panel2 ${
+              i === 0 ? "w-[280px] h-[220px] opacity-100" : "w-[170px] h-[220px] opacity-45"
+            }`}
+          >
+            {/* Replace with an <img src={p.src} alt={p.alt} className="w-full h-full object-cover rounded-xl" /> once real photos are added */}
+          </div>
+        ))}
+      </div>
+      <div className="flex gap-2.5 mt-4">
+        <button
+          onClick={() => scrollRail(-1)}
+          aria-label="Previous photo"
+          className="w-8 h-8 rounded-full border border-line bg-panel flex items-center justify-center hover:border-periwinkle hover:text-periwinkle"
+        >
+          ←
+        </button>
+        <button
+          onClick={() => scrollRail(1)}
+          aria-label="Next photo"
+          className="w-8 h-8 rounded-full border border-line bg-panel flex items-center justify-center hover:border-periwinkle hover:text-periwinkle"
+        >
+          →
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function WatchingRail() {
+  const [watching, setWatching] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("https://api.jikan.moe/v4/users/sahorin/animelist?status=watching")
+      .then((r) => r.json())
+      .then((json) => {
+        const list = (json.data || []).map((entry) => ({
+          title: entry.anime.title,
+          poster: entry.anime.images?.jpg?.image_url,
+          episodeLabel:
+            entry.watched_episodes && entry.anime.episodes
+              ? `Ep ${entry.watched_episodes} / ${entry.anime.episodes}`
+              : entry.watched_episodes
+              ? `Ep ${entry.watched_episodes}`
+              : "—",
+        }));
+        setWatching(list);
+      })
+      .catch((err) => console.error("MAL fetch failed:", err))
+      .finally(() => setLoading(false));
+  }, []);
+
+  return (
+    <div className="py-14 border-b border-line">
+      <div className="flex justify-between items-baseline mb-6">
+        <h2 className="text-[19px] font-display font-semibold">What I'm watching now</h2>
+        <span className="text-[11px] tracking-wider text-steel">MYANIMELIST</span>
+      </div>
+
+      {loading ? (
+        <p className="text-sm text-faint">Loading…</p>
+      ) : watching.length === 0 ? (
+        <p className="text-sm text-faint">Nothing currently airing on my list.</p>
+      ) : (
+        <div className="rail flex gap-3 overflow-x-auto pb-1.5">
+          {watching.map((a, i) => (
+            <div key={i} className="flex-shrink-0 w-[130px] bg-panel border border-line rounded-lg overflow-hidden">
+              <div
+                className="h-[170px] bg-gradient-to-br from-navy to-panel2 bg-cover bg-center"
+                style={a.poster ? { backgroundImage: `url(${a.poster})` } : undefined}
+              />
+              <div className="px-3 py-2.5">
+                <p className="text-xs mb-1 leading-snug">{a.title}</p>
+                <span className="text-[11px] text-faint">{a.episodeLabel}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function SpotifyTabs() {
+  const [tab, setTab] = useState("now");
+  const track = tab === "now" ? nowPlaying : topTrack;
+  const label = tab === "now" ? "NOW PLAYING" : "TOP TRACK · ALL TIME";
+
+  const btnRefs = useRef({});
+  const [glassStyle, setGlassStyle] = useState({ left: 0, width: 0 });
+
+  const moveGlass = (key) => {
+    const btn = btnRefs.current[key];
+    if (btn) setGlassStyle({ left: btn.offsetLeft, width: btn.offsetWidth });
+  };
+
+  useEffect(() => {
+    moveGlass(tab);
+    window.addEventListener("resize", () => moveGlass(tab));
+    return () => window.removeEventListener("resize", () => moveGlass(tab));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tab]);
+
+  return (
+    <div className="py-14">
+      <div className="flex justify-between items-baseline mb-6">
+        <h2 className="text-[19px] font-display font-semibold">Current music taste</h2>
+        <span className="text-[11px] tracking-wider text-steel">SPOTIFY</span>
+      </div>
+
+      <div className="relative flex justify-center gap-1.5 mb-5">
+        <div className="relative flex gap-1.5 border border-line rounded-full p-1 bg-panel">
+          <span
+            className="absolute top-1 bottom-1 rounded-full bg-periwinkle transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)]"
+            style={{ left: glassStyle.left, width: glassStyle.width }}
+            aria-hidden="true"
+          />
+          <button
+            ref={(el) => (btnRefs.current["now"] = el)}
+            onClick={() => setTab("now")}
+            className={`relative z-10 text-xs px-4 py-1.5 rounded-full transition-colors duration-300 ${
+              tab === "now" ? "text-bg" : "text-lo hover:text-hi"
+            }`}
+          >
+            Recently played
+          </button>
+          <button
+            ref={(el) => (btnRefs.current["top"] = el)}
+            onClick={() => setTab("top")}
+            className={`relative z-10 text-xs px-4 py-1.5 rounded-full transition-colors duration-300 ${
+              tab === "top" ? "text-bg" : "text-lo hover:text-hi"
+            }`}
+          >
+            Top tracks
+          </button>
+        </div>
+      </div>
+
+      <div className="max-w-[420px] mx-auto">
+        <div className="bg-panel border border-line rounded-xl p-4 flex items-center gap-3.5">
+          <div className="w-[52px] h-[52px] rounded-full bg-gradient-to-br from-navy to-panel2 flex items-center justify-center">
+            {tab === "now" && (
+              <div className="flex gap-0.5 items-end h-3.5">
+                <span className="eq-bar w-0.5 bg-periwinkle" style={{ animationDelay: "0s" }} />
+                <span className="eq-bar w-0.5 bg-periwinkle" style={{ animationDelay: "0.2s" }} />
+                <span className="eq-bar w-0.5 bg-periwinkle" style={{ animationDelay: "0.4s" }} />
+              </div>
+            )}
+          </div>
+          <div>
+            <span className="text-[11px] tracking-wider text-steel block mb-1">{label}</span>
+            <p className="text-sm text-hi mb-0.5">{track.title}</p>
+            <p className="text-xs text-faint m-0">{track.artist}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function About() {
-    const { ref } = useSectionInView("about", 0.9);
-
-    return (
-        <motion.section 
-            id="about"
-            className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.175 }}
-            ref={ref}
-        >
-            <FontAwesomeIcon className="text-purple-400 text-4xl" icon={faAddressCard} />
-            <h1 className="text-gray-100 text-3xl font-semibold mb-8">About Me</h1>
-            <div className="bg-gray-800 w-full p-4 rounded-xl border-gray-700 border-2">
-                <p className="mb-3">
-                    I'm a recent graduate <span className="text-violet-400">B.S. Software Engineer</span> from the <span className="text-blue-300 font-semibold">University of California, Irvine</span>. I'm currently working at <span className="text-blue-300 font-bold">Meta</span> as a <span className="text-violet-400">Software Engineer, iOS Engineering</span> for Facebook Messenger under their Media team.
-                    
-                </p>
-                <p>
-                    If I'm not at my computer coding, some hobbies that I have are that I enjoy playing guitar, <span className="text-violet-400">lifting weights</span>, going on
-                    hikes, playing <span className="text-violet-400">League of Legends</span>, drinking boba, cafe hopping, eating lots of food, watching anime, bass fishing, going on runs, and playing football.
-                </p>
-            </div>
-        </motion.section>
-    );
+  return (
+    <>
+      <PhotoCarousel />
+      <WatchingRail />
+      <SpotifyTabs />
+    </>
+  );
 }

@@ -1,3 +1,121 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--hi);
+  font-family: "Quicksand", sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+  transition:
+    background-color 700ms ease,
+    color 700ms ease;
+}
+
+*,
+*::before,
+*::after {
+  transition:
+    background-color 700ms ease,
+    color 700ms ease,
+    border-color 700ms ease,
+    box-shadow 700ms ease;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Playpen Sans', cursive;
+}
+
+h3 {
+  font-family: "Quicksand", sans-serif;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: color;
+}
+
+/* thin scrollbars for horizontal rails */
+.rail::-webkit-scrollbar {
+  height: 6px;
+}
+.rail::-webkit-scrollbar-thumb {
+  background: #211D3F;
+  border-radius: 999px;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page-enter {
+  animation: rise 0.45s ease both;
+}
+
+@keyframes eq {
+  0%, 100% { height: 4px; }
+  50% { height: 14px; }
+}
+.eq-bar {
+  animation: eq 1s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .page-enter { animation: none; }
+  .eq-bar { animation: none; }
+}
+
+/* =========================
+   DARK THEME
+   ========================= */
+
+:root {
+  --bg: #090617;
+  --panel: #0F0C24;
+  --panel2: #141130;
+  --line: #211D3F;
+  --periwinkle: #8F99FB;
+  --steel: #A2BDDB;
+  --navy: #00295B;
+  --hi: #EEEBFA;
+  --lo: #8A87A3;
+  --faint: #5C5876;
+
+  --glass: rgba(20, 17, 45, 0.55);
+  --active-shadow: rgba(143, 153, 251, 0.35);
+
+  --accent-glow: rgba(143, 153, 251, 0.18);
+  --marker-ring: rgba(33, 29, 63, 0.9);
+  --hover-panel: rgba(255, 255, 255, 0.045);
+  --shadow-ambient: rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   LIGHT THEME
+   ========================= */
+
+:root[data-theme="light"] {
+  --bg: #ECD8C0;
+  --panel: #F1F5E0;
+  --panel2: #B5C2A6;
+  --line: #BCA788;
+  --periwinkle: #6FA34C;
+  --steel: #5B7A52;
+  --navy: #4F5A43;
+  --hi: #2D2923;
+  --lo: #6F665B;
+  --faint: #8A7D6C;
+
+  --glass: rgba(241, 245, 224, 0.72);
+  --active-shadow: rgba(181, 194, 166, 0.45);
+
+  --accent-glow: rgba(203, 218, 171, 0.30);
+  --marker-ring: rgba(255, 255, 255, 0.75);
+  --hover-panel: rgba(255, 255, 255, 0.35);
+  --shadow-ambient: rgba(90, 80, 60, 0.18);
+}

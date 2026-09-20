@@ -1,86 +1,152 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
-export default function Project(props) {
-    const { title, subtitle, description, tags, imageUrl, link } = props;
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["0 1", "1.33 1"],
-    });
-    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-
+function Marker({ entry, accent }) {
+  if (entry.icon) {
     return (
-        <motion.div
-            ref={ref}
-            style={{
-                scale: scaleProgress,
-                opacity: opacityProgress,
-            }}
-            className="group mb-3 sm:mb-8 last:mb-0"
-            >
-            <a
-                href={link}
-                target="_blank"
-                rel="noreferrer"
-                className="block"
-                >
-
-                <section 
-                    className="border-gray-700 text-white bg-gray-800 max-w-[42rem] border border-2 border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-slate-700 transition cursor-pointer"
-                >
-                    <div className="pb-4 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-                        <h3 
-                            className="mt-3 sm:-mt-3 text-2xl font-semibold"
-                        >
-                            {title}
-                        </h3>
-
-                        <h6 
-                            className="font-semibold"
-                        >
-                            {subtitle}
-                        </h6>
-
-                        <p 
-                            className="mt-2 leading-relaxed text-white/70"
-                        >
-                            {description}
-                        </p>
-                    
-                        <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-                            {tags.map((tag, index) => (
-                                <li 
-                                    className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white/70 rounded-full" 
-                                    key={index}
-                                >
-                                    {tag}
-                                </li>
-                            ))}
-                        </ul>
-                        <img 
-                            className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-lg shadow-2xl
-                            transition
-                            group-hover:scale[1.04]
-
-                            group-hover:-translate-x-3
-                            group-hover:translate-y-3
-                            group-hover:-rotate-2
-
-                            group-even:group-hover:translate-x-3
-                            group-even:group-hover:translate-y-3
-                            group-even:group-hover:rotate-2
-
-                            group-even:right-[initial] group-even:-left-40
-                            "
-                            src={imageUrl} 
-                            alt="Project I worked on" 
-                            quality={95} 
-                        />
-                    </div>
-                </section>
-            </a>
-        </motion.div>
+      <span
+        className="absolute -left-[56px] top-0 w-10 h-10 rounded-full overflow-hidden"
+        style={{
+          background: entry.iconBg || "var(--panel)",
+          boxShadow: `
+            0 0 0 2px ${accent},
+            0 0 0 5px var(--marker-ring),
+            0 0 18px ${accent}66
+          `,
+        }}
+      >
+        <img
+          src={entry.icon}
+          alt=""
+          className={`w-full h-full ${
+            entry.iconFit === "cover"
+              ? "object-cover"
+              : "object-contain p-1.5"
+          } ${entry.iconScale || ""}`}
+        />
+      </span>
     );
+  }
+
+  return (
+    <span
+      className="absolute -left-[30px] top-1 w-[11px] h-[11px] rounded-full"
+      style={{
+        background: accent,
+        boxShadow: `0 0 0 3px ${accent}33`,
+      }}
+    />
+  );
+}
+
+function EntryBody({ entry, accent }) {
+  return (
+    <>
+      <span
+        className="text-xs font-medium block mb-2"
+        style={{ color: accent }}
+      >
+        {entry.when}
+      </span>
+
+      {entry.company ? (
+        <>
+          <h3 className="text-[19px] font-semibold mb-1">
+            {entry.company}
+          </h3>
+
+          <p className="text-[14.5px] font-semibold text-lo mb-2">
+            {entry.title}
+          </p>
+        </>
+      ) : (
+        <h3 className="text-[19px] font-semibold mb-2">
+          {entry.title}
+        </h3>
+      )}
+
+      <p className="text-[14.5px] leading-relaxed text-lo max-w-[62ch] mb-3.5">
+        {entry.description}
+      </p>
+
+      {entry.tags && entry.tags.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          {entry.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-[11px] px-2.5 py-1 rounded-md border"
+              style={{
+                borderColor: `${accent}73`,
+                color: accent,
+                backgroundColor: `${accent}1f`,
+              }}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </>
+  );
+}
+
+export default function Project({ entry, isLast }) {
+  const [isLight, setIsLight] = useState(
+    document.documentElement.dataset.theme === "light"
+  );
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsLight(document.documentElement.dataset.theme === "light");
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const accent = entry.accent[isLight ? "light" : "dark"];
+
+  const inner = (
+    <div
+      className={`relative group rounded-xl -mx-3 px-3 py-2 transition-colors duration-200 hover:bg-[var(--hover-panel)] ${
+        isLast ? "" : "pb-[46px]"
+      }`}
+    >
+      <Marker entry={entry} accent={accent} />
+
+      <div className={entry.image ? "sm:flex sm:gap-3 sm:items-start" : ""}>
+        <div className={entry.image ? "sm:flex-1 sm:min-w-0" : ""}>
+          <EntryBody entry={entry} accent={accent} />
+        </div>
+
+        {entry.image && (
+          <div className="hidden sm:block w-[220px] flex-shrink-0 mt-1">
+            <img
+              src={entry.image}
+              alt={entry.title}
+              className="block w-full rounded-lg shadow-lg origin-right transition-transform duration-300 ease-out group-hover:-translate-x-2 group-hover:-rotate-2 group-hover:scale-[1.04]"
+            />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+
+  if (entry.link) {
+    return (
+      <a
+        href={entry.link}
+        target="_blank"
+        rel="noreferrer"
+        className="block cursor-pointer"
+      >
+        {inner}
+      </a>
+    );
+  }
+
+  return inner;
 }

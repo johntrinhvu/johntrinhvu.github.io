@@ -1,37 +1,44 @@
 import React from "react";
-import ActiveSectionContextProvider from "../context/ActiveSectionContext/ActiveSectionContext.tsx";
+import { ActiveSectionProvider } from "../context/ActiveSectionContext/ActiveSectionContext";
+import { useActiveSection } from "../hooks";
 import Header from "../components/Header/Header";
 import Intro from "../components/Intro/Intro";
-import SectionDivider from "../components/SectionDivider/SectionDivider";
 import About from "../components/About/About";
-import Skills from "../components/Skills/Skills";
-import Portfolio from "../components/Portfolio/Portfolio";
 import Experience from "../components/Experience/Experience";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 
+function Pages() {
+  const { activeSection } = useActiveSection();
+
+  return (
+    <main className="max-w-[960px] mx-auto px-10 pt-[130px]">
+      {activeSection === "home" && (
+        <section key="home" className="page-enter">
+          <Intro />
+          <About />
+        </section>
+      )}
+      {activeSection === "experience" && (
+        <section key="experience" className="page-enter">
+          <Experience />
+        </section>
+      )}
+      {activeSection === "contact" && (
+        <section key="contact" className="page-enter">
+          <Contact />
+        </section>
+      )}
+    </main>
+  );
+}
+
 export default function App() {
   return (
-    <body
-      className="text-opacity-90 flex flex-col items-center px-4 font-ubuntu text-gray-300 relative pt-28 sm:pt-36 min-h-screen"
-    >
-      <div className="bg-violet-300 absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
-      <div className="bg-indigo-500 absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] 
-        lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"
-      >
-      </div>
-
-      <ActiveSectionContextProvider>
-        <Header />
-        <Intro />
-        <SectionDivider />
-        <About />
-        <Skills />
-        <Portfolio />
-        <Experience />
-        <Contact />
-        <Footer />
-      </ActiveSectionContextProvider>
-    </body>
+    <ActiveSectionProvider>
+      <Header />
+      <Pages />
+      <Footer />
+    </ActiveSectionProvider>
   );
-};
+}

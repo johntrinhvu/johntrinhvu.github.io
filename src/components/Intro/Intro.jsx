@@ -1,94 +1,42 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faDownload } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import profilePicture from "../../images/profilePicture.png";
-import { useSectionInView } from "../../hooks.tsx";
-import { useActiveSectionContext } from "../../context/ActiveSectionContext/ActiveSectionContext.tsx";
+import profilePicture from "../../images/profilePicture.jpg";
+import logo from "../../images/logo.png";
 
 export default function Intro() {
-    const { ref } = useSectionInView("home", 0.95);
-    const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  return (
+    <div className="pb-[70px] border-b border-line">
+      <div className="flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left gap-7">
+        <img
+          src={profilePicture}
+          alt="John Trinh Vu"
+          className="w-[128px] h-[128px] rounded-full object-cover object-top flex-shrink-0 border-2 border-periwinkle shadow-[0_0_0_4px_var(--accent-glow)]"
+        />
 
-    return (
-        <section ref={ref} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
-            <div className="flex items-center justify-center">
-                <div className="relative">
-                    <motion.div
-                        className=""
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ type: "tween", duration: 0.2 }}
-                    >
-                        <img 
-                            className="object-cover object-center rounded-full h-32 w-32 border-[0.10rem] border-white object-cover shadow-xl"
-                            src={profilePicture}
-                            alt="John Vu Headshot"
-                            width="192"
-                            height="192"
-                            quality="95"
-                            priority={true}
-                        />
-                    </motion.div>
-                </div>
-            </div>
+        <div>
+          <div className="flex items-center justify-center sm:justify-start gap-2.5 mb-5">
+            <img
+              src={logo}
+              alt=""
+              className="w-10 h-10 object-contain"
+            />
+            <span className="text-[11px] tracking-wider text-steel">SAN FRANCISCO BAY AREA</span>
+          </div>
 
-            <motion.h1
-                className="text-white mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-            >
-                Hi, I'm <span className="font-bold text-fuchsia-800">John Trinh Vu</span>. I'm a{" "}
-                <span className="">Full Stack Software Engineer</span>.
-            </motion.h1>
+          <h1 className="font-display font-semibold leading-tight text-[clamp(32px,4.4vw,50px)] mb-5">
+            hey, i'm johnnie
+          </h1>
 
-            <motion.div
-                className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-            >   
-                <a
-                    href="#contact"
-                    className="group bg-purple-800 text-purple-100 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-purple-900 active:scale-105 transition"
-                    onClick={() => {
-                        setActiveSection("Contact");
-                        setTimeOfLastClick(Date.now());
-                    }}
-                >
-                    Contact Me{" "}
-                    <FontAwesomeIcon className="opacity-70 group-hover:translate-x-1 transition" icon={faArrowRight} />
-                </a>
+          <p className="text-base leading-relaxed text-lo max-w-[56ch] mb-7">
+            software engineer from irvine now in the bay. challenger adc player,
+            climber, and matcha + tea barista. (looking to relocate back to LA/OC)
+          </p>
 
-                <a
-                    className="text-white hover:text-purple-300 group bg-gray-800 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition border-black" 
-                    href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:d9b1e246-a520-4497-8b84-8961c695e470"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    Download CV{" "}
-                    <FontAwesomeIcon className="opacity-70 group-hover:translate-y-1 transition" icon={faDownload} />
-                </a>
-
-                <a
-                    className="bg-gray-800 p-4 text-white hover:text-purple-300 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border-black"
-                    href="https://www.linkedin.com/in/johntrinhvu/"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <FontAwesomeIcon icon={faLinkedin} />
-                </a>
-
-                <a
-                    className="bg-gray-800 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale[1.15] hover:scale-[1.15] hover:text-purple-300 active:scale-105 transition cursor-pointer border-black"
-                    href="https://www.github.com/johntrinhvu/"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <FontAwesomeIcon icon={faGithub} />
-                </a>
-            </motion.div>
-        </section>
-    )
-};
+          <div className="inline-flex items-center gap-2.5 border border-line rounded-full px-4 py-2.5 text-[13px] bg-glass backdrop-blur-2xl backdrop-saturate-150 shadow-[0_8px_30px_rgba(0,0,0,0.35)]">
+            <span className="w-1.5 h-1.5 rounded-full bg-periwinkle shadow-[0_0_0_3px_var(--accent-glow)]" />
+            Software Engineer (iOS) at Meta
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
