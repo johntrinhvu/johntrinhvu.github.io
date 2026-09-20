@@ -1,9 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import {
-    getRecentlyPlayed,
-    getTopTracks,
-    loginSpotify,
-  } from "../../spotify/spotify";
 
 export default function SpotifyTabs() {
     const [tab, setTab] = useState("now");
@@ -39,51 +34,26 @@ export default function SpotifyTabs() {
     }, [tab]);
   
     useEffect(() => {
-      async function loadSpotify() {
-        try {
-          const {
-            getRecentlyPlayed,
-            getTopTracks,
-          } = await import("../../spotify/spotify");
-  
-          const [recent, top] = await Promise.all([
-            getRecentlyPlayed(),
-            getTopTracks(),
-          ]);
-  
-          setRecentTracks(recent);
-          setTopTracks(top);
-        } catch (err) {
-          console.error("Spotify fetch failed:", err);
-  
-          if (err.message === "Spotify authorization expired") {
-            localStorage.removeItem("spotify_access_token");
-            localStorage.removeItem("spotify_refresh_token");
-            localStorage.removeItem("spotify_expires_at");
-  
-            const { loginSpotify } = await import(
-              "../../spotify/spotify"
-            );
-  
-            loginSpotify();
-            return;
-          }
-  
-          setError(true);
-        } finally {
-          setLoading(false);
-        }
-      }
-  
-      const token = localStorage.getItem("spotify_access_token");
-  
-      if (!token) {
-        setLoading(false);
-        return;
-      }
-  
-      loadSpotify();
-    }, []);
+        fetch("https://johntrinhvu-spotify.johntrinhvu.workers.dev/api/spotify")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`Spotify API failed: ${response.status}`);
+            }
+      
+            return response.json();
+          })
+          .then((data) => {
+            setRecentTracks(data.recentlyPlayed || []);
+            setTopTracks(data.topTracks || []);
+          })
+          .catch((err) => {
+            console.error("Spotify fetch failed:", err);
+            setError(true);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
+      }, []);
   
     const tracks = tab === "now" ? recentTracks : topTracks;
   
